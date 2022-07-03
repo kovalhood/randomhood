@@ -1,0 +1,2 @@
+const e=document.querySelector(".button_randomize"),t=document.querySelector(".number_rundomize"),o=document.querySelector("#random-from"),n=document.querySelector("#random-to");let r=[];e.addEventListener("click",(function(){t.textContent=(e=o.value,u=n.value,e=Math.ceil(e),u=Math.floor(u),Math.floor(Math.random()*(u-e+1))+e),r.push(t.textContent),console.log(r);var e,u}));
+//# sourceMappingURL=index.7096d299.js.map
