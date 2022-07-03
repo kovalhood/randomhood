@@ -1,5 +1,7 @@
 const randomizeButton = document.querySelector('.button_randomize');
 const randomNumber = document.querySelector('.number_rundomize');
+const inputFrom = document.querySelector('#random-from');
+const inputTo = document.querySelector('#random-to');
 
 let history = [];
 
@@ -12,9 +14,10 @@ function getRandomNumber(min, max) {
 }
 
 function handleRandomizeButton() {
-    randomNumber.textContent = getRandomNumber(0, 100);
+    randomNumber.textContent = getRandomNumber(inputFrom.value, inputTo.value);
     history.push(randomNumber.textContent);
     console.log(history);
+    // console.log(inputFrom,inputTo)
 }
 
 
