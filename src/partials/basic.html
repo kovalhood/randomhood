@@ -1,30 +1,37 @@
 <section class="section">
   <div class="container">
-    <h1>Randomizer</h1>
-    <form>
-      <input id="random-from" type="number" min="0" name="from" value="1" />
-      <input id="random-to" type="number" min="1" name="to" value="10" />
-      <input
-        id="random-amount"
-        type="number"
-        min="1"
-        max="100"
-        name="amount"
-        value="1"
-      />
-    </form>
+    <div class="randomizer">
+      <h1>Randomizer</h1>
 
-    <button type="button" class="randomize__button randomize__button--generate">
-      Generate
-    </button>
-    <button type="button" class="randomize__button randomize__button--clear">
-      Clear
-    </button>
-    <div>
-      <p>
-        <span class="randomize__number--text">Your number: </span>
-        <span class="randomize__number">0</span>
-      </p>
+      <form>
+        <input id="random-from" type="number" min="0" name="from" value="1" />
+        <input id="random-to" type="number" min="1" name="to" value="10" />
+        <input
+          id="random-amount"
+          type="number"
+          min="1"
+          max="100"
+          name="amount"
+          value="1"
+        />
+      </form>
+
+      <button
+        type="button"
+        class="randomize__button randomize__button--generate"
+      >
+        Generate
+      </button>
+      <button type="button" class="randomize__button randomize__button--clear">
+        Clear
+      </button>
+
+      <div>
+        <p>
+          <span class="randomize__number--text">Your number: </span>
+          <span class="randomize__number">0</span>
+        </p>
+      </div>
     </div>
   </div>
 </section>
