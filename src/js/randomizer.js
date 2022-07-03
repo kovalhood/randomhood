@@ -7,7 +7,7 @@ const inputAmount = document.querySelector('#random-amount');
 
 const numberWrapper = document.querySelector('.randomize__number-wrapper');
 const textBeforeNumber = document.querySelector('.randomize__number-text');
-const randomNumber = document.querySelector('.randomize__number');
+const randomNumberEl = document.querySelector('.randomize__number');
 
 let generatedNumbers = [];
 
@@ -26,7 +26,7 @@ function handleRandomizeButton() {
 }
 
 function handleClear() {
-    randomNumber.textContent = '0';
+    randomNumberEl.textContent = '0';
     numberWrapper.classList.add('hidden');
 }
 
@@ -40,16 +40,17 @@ function numbersGeneration(from, to, amount) {
 
     for (let i = 0; i < amount; i++) {
         let includesNumber = true;
+        let randomNumber;
 
         while (includesNumber) {
             // while operator stops execution when includesNumber = false, 
             // and then number pushes into array generatedNumbers
-            let number = getRandomNumber(from, to);
-            includesNumber = generatedNumbers.includes(number);
+            randomNumber = getRandomNumber(from, to);
+            includesNumber = generatedNumbers.includes(randomNumber);
         }
 
-        generatedNumbers.push(number);
-        randomNumber.textContent = generatedNumbers.join(', ');
+        generatedNumbers.push(randomNumber);
+        randomNumberEl.textContent = generatedNumbers.join(', ');
     }
     textBeforeNumberHandler();
 }
