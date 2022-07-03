@@ -19,7 +19,6 @@ function handleRandomizeButton() {
     randomNumber.textContent = getRandomNumber(inputFrom.value, inputTo.value);
     history.push(randomNumber.textContent);
     console.log(history);
-    // console.log(inputFrom,inputTo)
 }
 
 function handleClearButton() {
