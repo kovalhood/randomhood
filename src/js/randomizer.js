@@ -44,7 +44,7 @@ function numbersGeneration(from, to, amount) {
         while (includesNumber) {
             // while operator stops execution when includesNumber = false, 
             // and then number pushes into array generatedNumbers
-            number = getRandomNumber(from, to);
+            let number = getRandomNumber(from, to);
             includesNumber = generatedNumbers.includes(number);
         }
 
