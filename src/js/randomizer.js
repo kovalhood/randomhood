@@ -1,6 +1,7 @@
-const randomizeButton = document.querySelector('.button_randomize');
-const clearButton = document.querySelector('.button_clear');
-const randomNumber = document.querySelector('.number_rundomize');
+const randomizeButton = document.querySelector('.randomize_button--generate');
+const clearButton = document.querySelector('.randomize_button--clear');
+const randomNumber = document.querySelector('.randomize_number');
+const randomizeHistory = document.querySelector('.randomize_history');
 const inputFrom = document.querySelector('#random-from');
 const inputTo = document.querySelector('#random-to');
 
@@ -18,13 +19,13 @@ function getRandomNumber(min, max) {
 function handleRandomizeButton() {
     randomNumber.textContent = getRandomNumber(inputFrom.value, inputTo.value);
     history.push(randomNumber.textContent);
-    console.log(history);
+    randomizeHistory.textContent = history.join(', ');
 }
 
 function handleClearButton() {
     randomNumber.textContent = '0';
     history = [];
-    console.log(history);
+    randomizeHistory.textContent = '';
 }
 
 

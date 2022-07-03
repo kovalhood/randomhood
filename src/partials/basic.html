@@ -5,8 +5,17 @@
       <input id="random-from" type="number" min="0" name="from" value="0" />
       <input id="random-to" type="number" min="1" name="to" value="10" />
     </form>
-    <button type="button" class="button_randomize">Randomize</button>
-    <button type="button" class="button_clear">Clear</button>
-    <p class="number_rundomize">0</p>
+    <button type="button" class="randomize_button randomize_button--generate">
+      Generate
+    </button>
+    <button type="button" class="randomize_button randomize_button--clear">
+      Clear
+    </button>
+    <div>
+      <p>Your number: <span class="randomize_number">0</span></p>
+    </div>
+    <div>
+      <p>History: <span class="randomize_history"></span></p>
+    </div>
   </div>
 </section>
