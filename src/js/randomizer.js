@@ -1,12 +1,12 @@
-const randomizeButton = document.querySelector('.randomize_button--generate');
-const clearButton = document.querySelector('.randomize_button--clear');
+const randomizeButton = document.querySelector('.randomize__button--generate');
+const clearButton = document.querySelector('.randomize__button--clear');
 
 const inputFrom = document.querySelector('#random-from');
 const inputTo = document.querySelector('#random-to');
 const inputAmount = document.querySelector('#random-amount');
 
-const randomNumber = document.querySelector('.randomize_number');
-const randomizeHistory = document.querySelector('.randomize_history');
+const textBeforeNumber = document.querySelector('.randomize__number--text');
+const randomNumber = document.querySelector('.randomize__number');
 
 let generatedNumbers = [];
 
@@ -31,6 +31,7 @@ function handleClearButton() {
 function numbersGeneration(from, to, amount) {
     if (to - amount < 0) {
         randomNumber.textContent = '0';
+        textBeforeNumberHandler();
         return console.log('error');
     }
 
@@ -47,5 +48,14 @@ function numbersGeneration(from, to, amount) {
         generatedNumbers.push(number);
         randomNumber.textContent = generatedNumbers.join(', ');
     }
+    textBeforeNumberHandler();
+}
+
+function textBeforeNumberHandler() {
+    if (generatedNumbers.length > 1) {
+        return textBeforeNumber.textContent = 'Your numbers: ';
+    }
+
+    textBeforeNumber.textContent = 'Your number: ';
 }
 
