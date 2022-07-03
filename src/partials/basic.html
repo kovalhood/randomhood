@@ -2,9 +2,18 @@
   <div class="container">
     <h1>Randomizer</h1>
     <form>
-      <input id="random-from" type="number" min="0" name="from" value="0" />
+      <input id="random-from" type="number" min="0" name="from" value="1" />
       <input id="random-to" type="number" min="1" name="to" value="10" />
+      <input
+        id="random-amount"
+        type="number"
+        min="1"
+        max="100"
+        name="amount"
+        value="1"
+      />
     </form>
+
     <button type="button" class="randomize_button randomize_button--generate">
       Generate
     </button>
@@ -13,9 +22,6 @@
     </button>
     <div>
       <p>Your number: <span class="randomize_number">0</span></p>
-    </div>
-    <div>
-      <p>History: <span class="randomize_history"></span></p>
     </div>
   </div>
 </section>
