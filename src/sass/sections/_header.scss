@@ -3,26 +3,31 @@
     background-color: rgb(241, 241, 241);
 }
 
-.header__position{
+.navigation{
     display: flex;
     justify-content: space-between;
 }
 
-.navigation{
+.nav-menu{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo,
-.navigation__item{
+.nav-menu__item{
     cursor: pointer;
 }
 
-.navigation__item:not(:last-of-type){
+.nav-menu__item:hover,
+.nav-menu__item:focus{
+    color: dodgerblue;
+}
+
+.nav-menu__item:not(:last-of-type){
     margin-right: 20px;
 }
 
 .current{
-    color: red;
+    color:dodgerblue
 }
