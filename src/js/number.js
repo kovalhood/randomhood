@@ -1,5 +1,6 @@
 const randomizeButton = document.querySelector('.randomize__button--generate');
 const clearButton = document.querySelector('.randomize__button--clear');
+const resetButton = document.querySelector('.randomize__button--reset');
 
 const inputFrom = document.querySelector('#random-from');
 const inputTo = document.querySelector('#random-to');
@@ -11,8 +12,9 @@ const randomNumberEl = document.querySelector('.randomize__number');
 
 let generatedNumbers = [];
 
-randomizeButton.addEventListener('click', handleRandomizeButton);
+randomizeButton.addEventListener('click', handleRandomize);
 clearButton.addEventListener('click', handleClear);
+resetButton.addEventListener('click', handleReset);
 
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
@@ -20,7 +22,7 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function handleRandomizeButton() {
+function handleRandomize() {
     numbersGeneration(inputFrom.value, inputTo.value, inputAmount.value);
     generatedNumbers = [];
 }
@@ -30,15 +32,24 @@ function handleClear() {
     numberWrapper.classList.add('hidden');
 }
 
+function handleReset() {
+    randomNumberEl.textContent = '0';
+    numberWrapper.classList.add('hidden');
+
+    inputFrom.value = 1;
+    inputTo.value = 10;
+    inputAmount.value = 1;
+}
+
 function numbersGeneration(from, to, amount) {
-    if (to - amount < 0) {
+    if (to - from + 1 - amount < 0) {
         handleClear();
         return console.log('error');
     }
 
     numberWrapper.classList.remove('hidden');
 
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < amount; i+=1) {
         let includesNumber = true;
         let randomNumber;
 
