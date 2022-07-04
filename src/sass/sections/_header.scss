@@ -1,0 +1,28 @@
+.header{
+    padding: 20px 0;
+    background-color: rgb(241, 241, 241);
+}
+
+.header__position{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo,
+.navigation__item{
+    cursor: pointer;
+}
+
+.navigation__item:not(:last-of-type){
+    margin-right: 20px;
+}
+
+.current{
+    color: red;
+}
