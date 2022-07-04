@@ -1,22 +1,28 @@
 <header class="header">
   <div class="container">
     <nav class="navigation">
-      <a id="nav-logo" class="logo link">Randomizer</a>
+      <!-- <a id="nav-logo" class="logo link">Randomizer</a> -->
+      <a id="nav-logo" class="logo link">
+        <!-- <svg className="icon" width="24" height="24" aria-label="logo">
+          <use href={`${sprite}#logo`}></use>
+        </svg> -->
+        <p class="text">Randomizer</p>
+      </a>
       <ul class="nav-menu list">
-        <li class="nav-menu__item">
-          <a id="nav-number" class="nav-menu__link current"> Number </a>
+        <li id="nav-number" class="nav-menu__item current">
+          <a class="nav-menu__link"> Number </a>
         </li>
-        <li class="nav-menu__item">
-          <a id="nav-yesno" class="nav-menu__link"> Yes / No </a>
+        <li id="nav-yesno" class="nav-menu__item">
+          <a class="nav-menu__link"> Yes / No </a>
         </li>
-        <li class="nav-menu__item">
-          <a id="nav-dice" class="nav-menu__link"> Dice </a>
+        <li id="nav-dice" class="nav-menu__item">
+          <a class="nav-menu__link"> Dice </a>
         </li>
-        <li class="nav-menu__item">
-          <a id="nav-coin" class="nav-menu__link"> Coin </a>
+        <li id="nav-coin" class="nav-menu__item">
+          <a class="nav-menu__link"> Coin </a>
         </li>
-        <li class="nav-menu__item">
-          <a id="nav-password" class="nav-menu__link"> Password </a>
+        <li id="nav-password" class="nav-menu__item">
+          <a class="nav-menu__link"> Password </a>
         </li>
       </ul>
     </nav>
