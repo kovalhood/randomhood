@@ -1,37 +1,32 @@
 <section class="section">
-  <div class="container">
-    <div class="randomizer">
-      <h2>Generate random number</h2>
+  <div class="container randomizer">
+    <h2 class="section__title">Generate random number</h2>
 
-      <form>
-        <input id="random-from" type="number" min="0" name="from" value="1" />
-        <input id="random-to" type="number" min="1" name="to" value="10" />
-        <input
-          id="random-amount"
-          type="number"
-          min="1"
-          max="100"
-          name="amount"
-          value="1"
-        />
-      </form>
+    <form>
+      <input id="random-from" type="number" min="0" name="from" value="1" />
+      <input id="random-to" type="number" min="1" name="to" value="10" />
+      <input
+        id="random-amount"
+        type="number"
+        min="1"
+        max="100"
+        name="amount"
+        value="1"
+      />
+    </form>
 
-      <button
-        type="button"
-        class="randomize__button randomize__button--generate"
-      >
-        Generate
-      </button>
-      <button type="button" class="randomize__button randomize__button--clear">
-        Clear
-      </button>
+    <button type="button" class="randomize__button randomize__button--generate">
+      Generate
+    </button>
+    <button type="button" class="randomize__button randomize__button--clear">
+      Clear
+    </button>
 
-      <div class="randomize__number-wrapper hidden">
-        <p>
-          <span class="randomize__number-text">Your number: </span>
-          <span class="randomize__number">0</span>
-        </p>
-      </div>
+    <div class="randomize__number-wrapper hidden">
+      <p>
+        <span class="randomize__number-text">Your number: </span>
+        <span class="randomize__number">0</span>
+      </p>
     </div>
   </div>
 </section>
