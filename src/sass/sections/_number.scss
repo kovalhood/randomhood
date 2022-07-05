@@ -4,6 +4,19 @@
     align-items: center;
 }
 
+.randomize__buttons{
+    display: flex;
+    margin: 10px 0;
+}
+
+.randomize__button{
+    cursor: pointer;
+
+    &:not(:last-child){
+        margin-right: 10px;
+    }
+}
+
 .hidden{
     display: none;
 }
