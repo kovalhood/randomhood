@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://kovalhood.github.io/randomizer",
+  "homepage": "https://kovalhood.github.io/randomhood",
   "scripts": {
     "start": "parcel src/*.html --port 7777",
-    "build": "parcel build src/*.html --public-url /randomizer/"
+    "build": "parcel build src/*.html --public-url /randomhood/"
   },
   "repository": {
     "type": "git",
