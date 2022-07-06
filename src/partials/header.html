@@ -7,6 +7,7 @@
           <use href="./images/icons.svg#logo"></use>
         </svg>
         <p class="text">Randomizer</p>
+        <!-- randomhood -->
       </a>
       <ul class="nav-menu list">
         <li id="nav-number" class="nav-menu__item current">
@@ -27,12 +28,35 @@
       </ul>
 
       <!-- Mobile menu -->
-      <button type="button" class="mobile-nav-menu__button--open">Menu</button>
+      <button
+        type="button"
+        class="mobile-nav-menu__button mobile-nav-menu__button--open"
+      >
+        <svg
+          class="mobile-nav-menu__icon--open"
+          width="24"
+          height="24"
+          aria-label="logo"
+        >
+          <use href="./images/icons.svg#menu"></use>
+        </svg>
+      </button>
 
-      <div class="mobile-nav-menu__wrapper hidden">
-        <button type="button" class="mobile-nav-menu__button--close">
-          Close
+      <div class="mobile-nav-menu__wrapper">
+        <button
+          type="button"
+          class="mobile-nav-menu__button mobile-nav-menu__button--close"
+        >
+          <svg
+            class="mobile-nav-menu__icon--close"
+            width="30"
+            height="30"
+            aria-label="logo"
+          >
+            <use href="./images/icons.svg#close"></use>
+          </svg>
         </button>
+
         <ul class="mobile-nav-menu list">
           <li
             id="mobile-nav-number"

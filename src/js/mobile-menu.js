@@ -26,11 +26,11 @@ mobileNavCoin.addEventListener('click', handleMobileCoinClick);
 mobileNavPassword.addEventListener('click', handleMobilePasswordClick);
 
 function menuOpenHandler() {
-    mobileMenuEl.classList.remove('hidden');
+    mobileMenuEl.classList.add('is-open');
 }
 
 function menuCloseHandler() {
-    mobileMenuEl.classList.add('hidden');
+    mobileMenuEl.classList.remove('is-open');
 }
 
 function handleMobileNavNumberClick() {
@@ -46,7 +46,7 @@ function handleMobileNavNumberClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
 
-    // mobileMenuEl.classList.add('hidden');
+    mobileMenuEl.classList.remove('is-open');
 }
 
 function handleMobileYesNoClick() {
@@ -62,7 +62,7 @@ function handleMobileYesNoClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
 
-    // mobileMenuEl.classList.add('hidden');
+    mobileMenuEl.classList.remove('is-open');
 }
 
 function handleMobileDiceClick() {
@@ -78,7 +78,7 @@ function handleMobileDiceClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
 
-    // mobileMenuEl.classList.add('hidden');
+    mobileMenuEl.classList.remove('is-open');
 }
 
 function handleMobileCoinClick() {
@@ -94,7 +94,7 @@ function handleMobileCoinClick() {
     sectionCoin.classList.remove('hidden');
     sectionPassword.classList.add('hidden');
 
-    // mobileMenuEl.classList.add('hidden');
+    mobileMenuEl.classList.remove('is-open');
 }
 
 function handleMobilePasswordClick() {
@@ -110,5 +110,5 @@ function handleMobilePasswordClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.remove('hidden');
 
-    // mobileMenuEl.classList.add('hidden');
+    mobileMenuEl.classList.remove('is-open');
 }
