@@ -27,22 +27,23 @@
 }
 
 .logo__text {
-    display: none;
+    display: inline;
+    font-family: 'Varela Round';
+    margin-top: 3px;
+    margin-left: 10px;
+    font-size: 24px;
+    line-height: 0;
+    color: $accent-color;
+    transition: all 0.3s;
 
-    @media screen and (min-width: $tablet){
-        display: inline;
-        font-family: 'Varela Round';
-        margin-top: 3px;
-        margin-left: 10px;
-        font-size: 24px;
-        line-height: 0;
+    &--hood{
         color: $text-black;
-        transition: all 0.3s;
     }
 
-    .logo:hover & {
-        color: $accent-color;
-    }
+    // .logo:hover &, 
+    // .logo:focus & {
+    //     color: $accent-color;
+    // }
 }
 
 // Navigation
