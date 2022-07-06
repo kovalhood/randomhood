@@ -25,7 +25,35 @@
           <a class="nav-menu__link"> Password </a>
         </li>
       </ul>
-      <button type="button" class="mobile-nav-menu__button">Menu</button>
+
+      <!-- Mobile menu -->
+      <button type="button" class="mobile-nav-menu__button--open">Menu</button>
+
+      <div class="mobile-nav-menu__wrapper hidden">
+        <button type="button" class="mobile-nav-menu__button--close">
+          Close
+        </button>
+        <ul class="mobile-nav-menu list">
+          <li
+            id="mobile-nav-number"
+            class="mobile-nav-menu__item mobile-current"
+          >
+            <a class="mobile-nav-menu__link"> Number </a>
+          </li>
+          <li id="mobile-nav-yesno" class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link"> Yes / No </a>
+          </li>
+          <li id="mobile-nav-dice" class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link"> Dice </a>
+          </li>
+          <li id="mobile-nav-coin" class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link"> Coin </a>
+          </li>
+          <li id="mobile-nav-password" class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link"> Password </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>

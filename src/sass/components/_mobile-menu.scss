@@ -1,0 +1,32 @@
+.mobile-nav-menu__button--open {
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.mobile-nav-menu__button--close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mobile-nav-menu__wrapper {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 50px;
+    background-color: $accent-color;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.mobile-nav-menu__item{
+    color: white;
+    cursor: pointer;
+
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}

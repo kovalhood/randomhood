@@ -1,13 +1,12 @@
 .header{
     display: flex;
     align-items: center;
-    padding: 15px 0;
-    // height: 64px;
+    height: 56px;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
     @media screen and (min-width: $tablet) {
-        padding: 10px 0;
+        height: 64px;
     }
 }
 
@@ -48,6 +47,7 @@
 
 // Navigation
 .navigation{
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -121,11 +121,5 @@
     &::after {
         opacity: 1;
         transform: scaleX(1);
-    }
-}
-
-.mobile-nav-menu__button{
-    @media screen and (min-width: $tablet) {
-        display: none;
     }
 }
