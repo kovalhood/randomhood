@@ -2,7 +2,7 @@
   <div class="container randomizer">
     <h2 class="section__title">Generate random number</h2>
 
-    <form>
+    <form class="test">
       <input id="random-from" type="number" min="0" name="from" value="1" />
       <input id="random-to" type="number" min="1" name="to" value="10" />
       <input
@@ -13,6 +13,20 @@
         name="amount"
         value="1"
       />
+
+      <select id="sort-type" name="sort-type">
+        <option value="1">None</option>
+        <option value="2">Ascending</option>
+        <option value="3">Descending</option>
+      </select>
+
+      <input
+        type="checkbox"
+        id="duplicates-checkbox"
+        name="duplicates-checkbox"
+        value="duplicates"
+      />
+      <label for="duplicates-checkbox">Allow duplicates</label>
     </form>
 
     <div class="randomize__buttons">
