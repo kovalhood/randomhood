@@ -78,12 +78,32 @@ function multipleNumbersGeneration(from, to, amount) {
         }
         console.log(generatedNumbers);
     }
-    
+
+    sortGeneratedNumbers(generatedNumbers);
 
     numberWrapper.classList.remove('hidden');
 
     randomNumberEl.textContent = generatedNumbers.join(', ');
     textBeforeNumberHandler();
+}
+
+function sortGeneratedNumbers(array) {
+    if (sortType.value === '1') {
+        console.log('None')
+        return console.log(array);
+    };
+
+    if (sortType.value === '2') {
+        console.log('Ascending')
+        array.sort((a, b) => a - b);
+        return console.log(array);
+    };
+
+    if (sortType.value === '3') {
+        console.log('Descending')
+        array.sort((a, b) => b - a);
+        return console.log(array);
+    }
 }
 
 function textBeforeNumberHandler() {
@@ -93,4 +113,3 @@ function textBeforeNumberHandler() {
     
     textBeforeNumber.textContent = 'Your number: ';
 }
-
