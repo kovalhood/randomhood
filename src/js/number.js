@@ -57,6 +57,11 @@ function handleReset() {
 }
 
 function numbersGeneration(from, to, amount) {
+    if (to - from <= 0) {
+        handleReset();
+        return console.log('error');
+    }
+    
     amount = Math.floor(amount);
 
     if (amount === 1) {
@@ -79,7 +84,7 @@ function numbersGeneration(from, to, amount) {
         else if (!duplicatesCheckbox.checked) {
             console.log('false')
             if (to - from + 1 - amount < 0) {
-                handleClear();
+                handleReset();
                 return console.log('error');
             }
 
