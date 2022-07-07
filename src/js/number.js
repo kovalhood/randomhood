@@ -51,6 +51,9 @@ function handleReset() {
     inputAmount.value = 1;
     sortType.value = '1';
     duplicatesCheckbox.checked = false;
+
+    sortType.disabled = true;
+    duplicatesCheckbox.disabled = true;
 }
 
 function numbersGeneration(from, to, amount) {
@@ -95,7 +98,7 @@ function numbersGeneration(from, to, amount) {
             }
             console.log(generatedNumbers);
         }
-        
+
         sortGeneratedNumbers(generatedNumbers);
     }
     
