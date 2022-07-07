@@ -1,5 +1,4 @@
 const randomizeButton = document.querySelector('.randomize__button--generate');
-const clearButton = document.querySelector('.randomize__button--clear');
 const resetButton = document.querySelector('.randomize__button--reset');
 
 const inputFrom = document.querySelector('#random-from');
@@ -15,8 +14,8 @@ const randomNumberEl = document.querySelector('.randomize__number');
 let generatedNumbers = [];
 
 randomizeButton.addEventListener('click', handleRandomize);
-clearButton.addEventListener('click', handleClear);
 resetButton.addEventListener('click', handleReset);
+inputAmount.addEventListener('change', handleAmountChange);
 
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
@@ -25,15 +24,22 @@ function getRandomNumber(min, max) {
 }
 
 function handleRandomize() {
-    multipleNumbersGeneration(inputFrom.value, inputTo.value, inputAmount.value);
+    numbersGeneration(inputFrom.value, inputTo.value, inputAmount.value);
     generatedNumbers = [];
     // console.log(sortType.value);
     // console.log(duplicatesCheckbox.checked);
 }
 
-function handleClear() {
-    randomNumberEl.textContent = '0';
-    numberWrapper.classList.add('hidden');
+function handleAmountChange() {
+    if (inputAmount.value < 2) {
+        sortType.disabled = true;
+        duplicatesCheckbox.disabled = true;
+    }
+
+    if (inputAmount.value >= 2) {
+        sortType.disabled = false;
+        duplicatesCheckbox.disabled = false;
+    }
 }
 
 function handleReset() {
@@ -43,43 +49,56 @@ function handleReset() {
     inputFrom.value = 1;
     inputTo.value = 10;
     inputAmount.value = 1;
+    sortType.value = '1';
+    duplicatesCheckbox.checked = false;
 }
 
-function multipleNumbersGeneration(from, to, amount) {
-    // Allow duplicates
-    if (duplicatesCheckbox.checked) {
-        console.log('true')
-        for (let i = 0; i < amount; i+=1) {
-            generatedNumbers.push(getRandomNumber(from, to));
-        }
-        console.log(generatedNumbers);
+function numbersGeneration(from, to, amount) {
+    amount = Math.floor(amount);
+
+    if (amount === 1) {
+        console.log('1')
+        generatedNumbers.push(getRandomNumber(from, to));
     }
 
-    // Disallow duplicates 
-    else if (!duplicatesCheckbox.checked) {
-        console.log('false')
-        if (to - from + 1 - amount < 0) {
-            handleClear();
-            return console.log('error');
+    if (amount > 1) {
+        console.log('>1')
+        // Allow duplicates
+        if (duplicatesCheckbox.checked) {
+            console.log('true')
+            for (let i = 0; i < amount; i+=1) {
+                generatedNumbers.push(getRandomNumber(from, to));
+            }
+            console.log(generatedNumbers);
         }
 
-        for (let i = 0; i < amount; i+=1) {
-            let includesNumber = true;
-            let randomNumber;
-
-            while (includesNumber) {
-                // while operator stops execution when includesNumber = false, 
-                // and then number pushes into array generatedNumbers
-                randomNumber = getRandomNumber(from, to);
-                includesNumber = generatedNumbers.includes(randomNumber);
+        // Disallow duplicates 
+        else if (!duplicatesCheckbox.checked) {
+            console.log('false')
+            if (to - from + 1 - amount < 0) {
+                handleClear();
+                return console.log('error');
             }
 
-            generatedNumbers.push(randomNumber);
-        }
-        console.log(generatedNumbers);
-    }
+            for (let i = 0; i < amount; i+=1) {
+                let includesNumber = true;
+                let randomNumber;
 
-    sortGeneratedNumbers(generatedNumbers);
+                while (includesNumber) {
+                    // while operator stops execution when includesNumber = false, 
+                    // and then number pushes into array generatedNumbers
+                    randomNumber = getRandomNumber(from, to);
+                    includesNumber = generatedNumbers.includes(randomNumber);
+                }
+
+                generatedNumbers.push(randomNumber);
+            }
+            console.log(generatedNumbers);
+        }
+        
+        sortGeneratedNumbers(generatedNumbers);
+    }
+    
 
     numberWrapper.classList.remove('hidden');
 

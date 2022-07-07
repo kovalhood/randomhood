@@ -14,7 +14,7 @@
         value="1"
       />
 
-      <select id="sort-type" name="sort-type">
+      <select id="sort-type" name="sort-type" disabled="true">
         <option value="1">None</option>
         <option value="2">Ascending</option>
         <option value="3">Descending</option>
@@ -25,6 +25,7 @@
         id="duplicates-checkbox"
         name="duplicates-checkbox"
         value="duplicates"
+        disabled="true"
       />
       <label for="duplicates-checkbox">Allow duplicates</label>
     </form>
@@ -35,9 +36,6 @@
         class="randomize__button randomize__button--generate"
       >
         Generate
-      </button>
-      <button type="button" class="randomize__button randomize__button--clear">
-        Clear
       </button>
       <button type="button" class="randomize__button randomize__button--reset">
         Reset
