@@ -42,6 +42,7 @@ function handleAmountChange() {
     }
 }
 
+// Setting default values to our elements
 function handleReset() {
     randomNumberEl.textContent = '0';
     numberWrapper.classList.add('hidden');
