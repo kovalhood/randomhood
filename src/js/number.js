@@ -11,6 +11,27 @@ const numberWrapper = document.querySelector('.randomize__number-wrapper');
 const textBeforeNumber = document.querySelector('.randomize__number-text');
 const randomNumberEl = document.querySelector('.randomize__number');
 
+const quantity = {
+    fromRemove: document.querySelector('#quantity--from-remove'),
+    fromAdd: document.querySelector('#quantity--from-add'),
+}
+
+quantity.fromRemove.addEventListener('click', handlefromRemoveClick);
+quantity.fromAdd.addEventListener('click', handlefromAddClick);
+
+function handlefromRemoveClick() {
+    if (inputFrom.value == 1) {
+        console.log('test')
+        quantity.fromRemove.disabled = true;
+    }
+
+    return inputFrom.value = Number(inputFrom.value) - 1;
+}
+
+function handlefromAddClick() {
+    return inputFrom.value = Number(inputFrom.value) + 1;
+}
+
 let generatedNumbers = [];
 
 randomizeButton.addEventListener('click', handleRandomize);
