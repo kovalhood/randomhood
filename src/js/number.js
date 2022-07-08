@@ -21,7 +21,6 @@ quantity.fromAdd.addEventListener('click', handlefromAddClick);
 
 function handlefromRemoveClick() {
     if (inputFrom.value == 1) {
-        console.log('test')
         quantity.fromRemove.disabled = true;
     }
 
@@ -29,6 +28,9 @@ function handlefromRemoveClick() {
 }
 
 function handlefromAddClick() {
+    if (inputFrom.value == 1) {
+        quantity.fromRemove.disabled = false;
+    }
     return inputFrom.value = Number(inputFrom.value) + 1;
 }
 
