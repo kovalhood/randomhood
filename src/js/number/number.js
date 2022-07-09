@@ -1,11 +1,7 @@
+import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox } from './refs';
+
 const randomizeButton = document.querySelector('.randomize__button--generate');
 const resetButton = document.querySelector('.randomize__button--reset');
-
-const inputFrom = document.querySelector('#random-from');
-const inputTo = document.querySelector('#random-to');
-const inputAmount = document.querySelector('#random-amount');
-const sortType = document.querySelector('#sort-type');
-const duplicatesCheckbox = document.querySelector('#duplicates-checkbox');
 
 const numberWrapper = document.querySelector('.randomize__number-wrapper');
 const textBeforeNumber = document.querySelector('.randomize__number-text');
@@ -15,7 +11,6 @@ let generatedNumbers = [];
 
 randomizeButton.addEventListener('click', handleRandomize);
 resetButton.addEventListener('click', handleReset);
-inputAmount.addEventListener('change', handleAmountChange);
 
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
@@ -28,18 +23,6 @@ function handleRandomize() {
     generatedNumbers = [];
     // console.log(sortType.value);
     // console.log(duplicatesCheckbox.checked);
-}
-
-function handleAmountChange() {
-    if (inputAmount.value < 2) {
-        sortType.disabled = true;
-        duplicatesCheckbox.disabled = true;
-    }
-
-    if (inputAmount.value >= 2) {
-        sortType.disabled = false;
-        duplicatesCheckbox.disabled = false;
-    }
 }
 
 // Setting default values to our elements

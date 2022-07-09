@@ -59,7 +59,8 @@
 }
 
 #random-from,
-#random-to{
+#random-to,
+#random-amount{
     margin: 0 20px;
     padding: 15px;
     font-size: 16px;
@@ -72,15 +73,18 @@
 }
 
 .randomize__input-wrapper:hover #random-from,
-.randomize__input-wrapper:hover #random-to{
+.randomize__input-wrapper:hover #random-to,
+.randomize__input-wrapper:hover #random-amount{
     outline: none;
     border: 2px solid $input-border;
 }
 
 .randomize__input-wrapper:hover #random-from:focus,
 .randomize__input-wrapper:hover #random-to:focus,
+.randomize__input-wrapper:hover #random-amount:focus,
 #random-from:focus,
-#random-to:focus{
+#random-to:focus,
+#random-amount:focus{
     outline: none;
     border: 2px solid $accent-color;
 }

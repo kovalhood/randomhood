@@ -2,6 +2,7 @@
   <div class="container randomizer">
     <h2 class="section__title">Generate random number</h2>
 
+    <!-- Input From -->
     <div class="randomize__input-wrapper">
       <button
         type="button"
@@ -36,6 +37,7 @@
         </svg>
       </button>
     </div>
+    <!-- Input To -->
     <div class="randomize__input-wrapper">
       <button
         type="button"
@@ -70,29 +72,62 @@
         </svg>
       </button>
     </div>
-    <input
-      id="random-amount"
-      type="number"
-      min="1"
-      max="100"
-      name="amount"
-      value="1"
-    />
 
-    <select id="sort-type" name="sort-type" disabled="true">
-      <option value="1">None</option>
-      <option value="2">Ascending</option>
-      <option value="3">Descending</option>
-    </select>
+    <!-- Multiple numbers -->
+    <div>
+      <div class="randomize__input-wrapper">
+        <button
+          type="button"
+          id="quantity--amount-remove"
+          class="randomize__quantity"
+        >
+          <svg
+            class="randomize__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="minus"
+          >
+            <use href="./images/icons.svg#minus"></use>
+          </svg>
+        </button>
+        <input
+          id="random-amount"
+          type="number"
+          min="1"
+          max="100"
+          name="amount"
+          value="1"
+        />
+        <button
+          type="button"
+          id="quantity--amount-add"
+          class="randomize__quantity"
+        >
+          <svg
+            class="randomize__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="plus"
+          >
+            <use href="./images/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </div>
 
-    <input
-      type="checkbox"
-      id="duplicates-checkbox"
-      name="duplicates-checkbox"
-      value="duplicates"
-      disabled="true"
-    />
-    <label for="duplicates-checkbox">Allow duplicates</label>
+      <select id="sort-type" name="sort-type">
+        <option value="1">None</option>
+        <option value="2">Ascending</option>
+        <option value="3">Descending</option>
+      </select>
+
+      <input
+        type="checkbox"
+        id="duplicates-checkbox"
+        name="duplicates-checkbox"
+        value="duplicates"
+      />
+      <label for="duplicates-checkbox">Allow duplicates</label>
+    </div>
 
     <div class="randomize__buttons">
       <button
