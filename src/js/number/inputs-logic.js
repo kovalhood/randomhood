@@ -17,6 +17,15 @@ inputFrom.addEventListener('change', handleInputFromChange);
 inputTo.addEventListener('change', handleInputToChange);
 inputAmount.addEventListener('change', handleInputAmountChange);
 
+inputFrom.addEventListener('keydown', handleInputKeydown);
+inputTo.addEventListener('keydown', handleInputKeydown);
+inputAmount.addEventListener('keydown', handleInputKeydown);
+
+// Avoiding "e", "E", "+", "-", "." in input fields
+function handleInputKeydown(event) {
+    ["e", "E", "+", "-", "."].includes(event.key) && event.preventDefault();
+}
+
 // From quantity buttons
 function handleFromRemoveClick() {
     inputFrom.value = Number(inputFrom.value) - 1;
