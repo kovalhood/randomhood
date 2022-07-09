@@ -1,5 +1,10 @@
 import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, quantity } from './refs';
 import { fromMin, fromMax, toMin, toMax, amountMin, amountMax } from './limits';
+import {
+    fromRemoveButtonOff, fromRemoveButtonOn, fromAddButtonOff, fromAddButtonOn,
+    toRemoveButtonOff, toRemoveButtonOn, toAddButtonOff, toAddButtonOn,
+    amountRemoveButtonOff, amountRemoveButtonOn, amountAddButtonOff, amountAddButtonOn
+} from './button-switchers';
 
 quantity.fromRemove.addEventListener('click', handleFromRemoveClick);
 quantity.fromAdd.addEventListener('click', handleFromAddClick);
@@ -8,20 +13,20 @@ quantity.toAdd.addEventListener('click', handleToAddClick);
 quantity.amountRemove.addEventListener('click', handleAmountRemoveClick);
 quantity.amountAdd.addEventListener('click', handleAmountAddClick);
 
+inputFrom.addEventListener('change', handleInputFromChange);
+inputTo.addEventListener('change', handleInputToChange);
+inputAmount.addEventListener('change', handleInputAmountChange);
+
 // From quantity buttons
 function handleFromRemoveClick() {
     inputFrom.value = Number(inputFrom.value) - 1;
 
     if (inputFrom.value == fromMin) {
-        quantity.fromRemove.classList.remove('randomize__quantity');
-        quantity.fromRemove.classList.add('randomize__quantity--disabled');
-        return quantity.fromRemove.disabled = true;
+        fromRemoveButtonOff();
     }
 
     if (inputFrom.value <= fromMax - 1) {
-        quantity.fromAdd.classList.add('randomize__quantity');
-        quantity.fromAdd.classList.remove('randomize__quantity--disabled');
-        quantity.fromAdd.disabled = false;
+        fromAddButtonOn();
     }
 }
 
@@ -29,15 +34,25 @@ function handleFromAddClick() {
     inputFrom.value = Number(inputFrom.value) + 1;
 
     if (inputFrom.value >= fromMin + 1) {
-        quantity.fromRemove.classList.add('randomize__quantity');
-        quantity.fromRemove.classList.remove('randomize__quantity--disabled');
-        quantity.fromRemove.disabled = false;
+        fromRemoveButtonOn();
     }
 
     if (inputFrom.value == fromMax) {
-        quantity.fromAdd.classList.remove('randomize__quantity');
-        quantity.fromAdd.classList.add('randomize__quantity--disabled');
-        quantity.fromAdd.disabled = true;
+        fromAddButtonOff();
+    }
+}
+
+function handleInputFromChange() {
+    if (inputFrom.value < fromMin) {
+        inputFrom.value = fromMin;
+        fromRemoveButtonOff();
+        fromAddButtonOn();
+    }
+
+    if (inputFrom.value > fromMax) {
+        inputFrom.value = fromMax;
+        fromRemoveButtonOn();
+        fromAddButtonOff();
     }
 }
 
@@ -46,15 +61,11 @@ function handleToRemoveClick() {
     inputTo.value = Number(inputTo.value) - 1;
 
     if (inputTo.value == toMin) {
-        quantity.toRemove.classList.remove('randomize__quantity');
-        quantity.toRemove.classList.add('randomize__quantity--disabled');
-        return quantity.toRemove.disabled = true;
+        toRemoveButtonOff();
     }
 
     if (inputTo.value <= toMax - 1) {
-        quantity.toAdd.classList.add('randomize__quantity');
-        quantity.toAdd.classList.remove('randomize__quantity--disabled');
-        quantity.toAdd.disabled = false;
+        toAddButtonOn();
     }
 }
 
@@ -62,15 +73,25 @@ function handleToAddClick() {
     inputTo.value = Number(inputTo.value) + 1;
 
     if (inputTo.value >= toMin + 1) {
-        quantity.toRemove.classList.add('randomize__quantity');
-        quantity.toRemove.classList.remove('randomize__quantity--disabled');
-        quantity.toRemove.disabled = false;
+        toRemoveButtonOn();
     }
 
     if (inputTo.value == toMax) {
-        quantity.toAdd.classList.remove('randomize__quantity');
-        quantity.toAdd.classList.add('randomize__quantity--disabled');
-        quantity.toAdd.disabled = true;
+        toAddButtonOff();
+    }
+}
+
+function handleInputToChange() {
+    if (inputTo.value < toMin) {
+        inputTo.value = toMin;
+        toRemoveButtonOff();
+        toAddButtonOn();
+    }
+
+    if (inputTo.value > toMax) {
+        inputTo.value = toMax;
+        toRemoveButtonOn();
+        toAddButtonOff();
     }
 }
 
@@ -79,15 +100,11 @@ function handleAmountRemoveClick() {
     inputAmount.value = Number(inputAmount.value) - 1;
 
     if (inputAmount.value == amountMin) {
-        quantity.amountRemove.classList.remove('randomize__quantity');
-        quantity.amountRemove.classList.add('randomize__quantity--disabled');
-        return quantity.amountRemove.disabled = true;
+        amountRemoveButtonOff();
     }
 
     if (inputAmount.value <= amountMax - 1) {
-        quantity.amountAdd.classList.add('randomize__quantity');
-        quantity.amountAdd.classList.remove('randomize__quantity--disabled');
-        quantity.amountAdd.disabled = false;
+        amountAddButtonOn();
     }
 }
 
@@ -95,14 +112,24 @@ function handleAmountAddClick() {
     inputAmount.value = Number(inputAmount.value) + 1;
 
     if (inputAmount.value >= amountMin + 1) {
-        quantity.amountRemove.classList.add('randomize__quantity');
-        quantity.amountRemove.classList.remove('randomize__quantity--disabled');
-        quantity.amountRemove.disabled = false;
+        amountRemoveButtonOn();
     }
 
     if (inputAmount.value == amountMax) {
-        quantity.amountAdd.classList.remove('randomize__quantity');
-        quantity.amountAdd.classList.add('randomize__quantity--disabled');
-        quantity.amountAdd.disabled = true;
+        amountAddButtonOff();
+    }
+}
+
+function handleInputAmountChange() {
+    if (inputAmount.value < amountMin) {
+        inputAmount.value = amountMin;
+        amountRemoveButtonOff();
+        amountAddButtonOn();
+    }
+
+    if (inputAmount.value > amountMax) {
+        inputAmount.value = amountMax;
+        amountRemoveButtonOn();
+        amountAddButtonOff();
     }
 }
