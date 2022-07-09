@@ -52,13 +52,13 @@ function handleFromAddClick() {
 }
 
 function handleInputFromChange() {
-    if (inputFrom.value < fromMin) {
+    if (inputFrom.value <= fromMin) {
         inputFrom.value = fromMin;
         fromRemoveButtonOff();
         fromAddButtonOn();
     }
 
-    if (inputFrom.value > fromMax) {
+    if (inputFrom.value >= fromMax) {
         inputFrom.value = fromMax;
         fromRemoveButtonOn();
         fromAddButtonOff();
@@ -91,13 +91,13 @@ function handleToAddClick() {
 }
 
 function handleInputToChange() {
-    if (inputTo.value < toMin) {
+    if (inputTo.value <= toMin) {
         inputTo.value = toMin;
         toRemoveButtonOff();
         toAddButtonOn();
     }
 
-    if (inputTo.value > toMax) {
+    if (inputTo.value >= toMax) {
         inputTo.value = toMax;
         toRemoveButtonOn();
         toAddButtonOff();
@@ -130,13 +130,13 @@ function handleAmountAddClick() {
 }
 
 function handleInputAmountChange() {
-    if (inputAmount.value < amountMin) {
+    if (inputAmount.value <= amountMin) {
         inputAmount.value = amountMin;
         amountRemoveButtonOff();
         amountAddButtonOn();
     }
 
-    if (inputAmount.value > amountMax) {
+    if (inputAmount.value >= amountMax) {
         inputAmount.value = amountMax;
         amountRemoveButtonOn();
         amountAddButtonOff();
