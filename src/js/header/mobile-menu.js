@@ -51,10 +51,7 @@ function handleMobileNavNumberClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
-
-    setTimeout(() => {
-        themeSelector.setAttribute("content", "#ffffff");
-    }, 250);
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileYesNoClick() {
@@ -71,9 +68,7 @@ function handleMobileYesNoClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
-    setTimeout(() => {
-        themeSelector.setAttribute("content", "#ffffff");
-    }, 250);
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileDiceClick() {
@@ -90,9 +85,7 @@ function handleMobileDiceClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
-    setTimeout(() => {
-        themeSelector.setAttribute("content", "#ffffff");
-    }, 250);
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileCoinClick() {
@@ -109,9 +102,7 @@ function handleMobileCoinClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
-    setTimeout(() => {
-        themeSelector.setAttribute("content", "#ffffff");
-    }, 250);
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobilePasswordClick() {
@@ -128,7 +119,5 @@ function handleMobilePasswordClick() {
     sectionPassword.classList.remove('hidden');
 
     mobileMenuEl.classList.remove('is-open');
-    setTimeout(() => {
-        themeSelector.setAttribute("content", "#ffffff");
-    }, 250);
+    themeSelector.setAttribute("content", "#ffffff");
 }
