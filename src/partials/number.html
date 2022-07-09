@@ -2,71 +2,14 @@
   <div class="container randomizer">
     <h2 class="section__title">Generate random number</h2>
 
-    <!-- Input From -->
-    <div class="randomize__input-wrapper">
-      <button
-        type="button"
-        id="quantity--from-remove"
-        class="randomize__quantity"
-      >
-        <svg
-          class="randomize__quantity--icon"
-          width="20"
-          height="20"
-          aria-label="minus"
-        >
-          <use href="./images/icons.svg#minus"></use>
-        </svg>
-      </button>
-      <input id="random-from" type="number" name="from" value="1" />
-      <button type="button" id="quantity--from-add" class="randomize__quantity">
-        <svg
-          class="randomize__quantity--icon"
-          width="20"
-          height="20"
-          aria-label="plus"
-        >
-          <use href="./images/icons.svg#plus"></use>
-        </svg>
-      </button>
-    </div>
-    <!-- Input To -->
-    <div class="randomize__input-wrapper">
-      <button
-        type="button"
-        id="quantity--to-remove"
-        class="randomize__quantity"
-      >
-        <svg
-          class="randomize__quantity--icon"
-          width="20"
-          height="20"
-          aria-label="minus"
-        >
-          <use href="./images/icons.svg#minus"></use>
-        </svg>
-      </button>
-      <input id="random-to" type="number" name="to" value="10" />
-      <button type="button" id="quantity--to-add" class="randomize__quantity">
-        <svg
-          class="randomize__quantity--icon"
-          width="20"
-          height="20"
-          aria-label="plus"
-        >
-          <use href="./images/icons.svg#plus"></use>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Multiple numbers -->
-    <div>
+    <!-- Single number generation -->
+    <div class="randomize__single">
+      <!-- Input From -->
       <div class="randomize__input-wrapper">
         <button
           type="button"
-          id="quantity--amount-remove"
-          class="randomize__quantity--disabled"
-          disabled="true"
+          id="quantity--from-remove"
+          class="randomize__quantity"
         >
           <svg
             class="randomize__quantity--icon"
@@ -77,10 +20,10 @@
             <use href="./images/icons.svg#minus"></use>
           </svg>
         </button>
-        <input id="random-amount" type="number" name="amount" value="2" />
+        <input id="random-from" type="number" name="from" value="1" />
         <button
           type="button"
-          id="quantity--amount-add"
+          id="quantity--from-add"
           class="randomize__quantity"
         >
           <svg
@@ -93,20 +36,88 @@
           </svg>
         </button>
       </div>
+      <!-- Input To -->
+      <div class="randomize__input-wrapper">
+        <button
+          type="button"
+          id="quantity--to-remove"
+          class="randomize__quantity"
+        >
+          <svg
+            class="randomize__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="minus"
+          >
+            <use href="./images/icons.svg#minus"></use>
+          </svg>
+        </button>
+        <input id="random-to" type="number" name="to" value="10" />
+        <button type="button" id="quantity--to-add" class="randomize__quantity">
+          <svg
+            class="randomize__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="plus"
+          >
+            <use href="./images/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-      <select id="sort-type" name="sort-type">
-        <option value="1">None</option>
-        <option value="2">Ascending</option>
-        <option value="3">Descending</option>
-      </select>
+    <!-- Multiple numbers generation -->
+    <div class="randomize__multiple">
+      <div class="randomize__multiple--amount">
+        <div class="randomize__input-wrapper">
+          <button
+            type="button"
+            id="quantity--amount-remove"
+            class="randomize__quantity--disabled"
+            disabled="true"
+          >
+            <svg
+              class="randomize__quantity--icon"
+              width="20"
+              height="20"
+              aria-label="minus"
+            >
+              <use href="./images/icons.svg#minus"></use>
+            </svg>
+          </button>
+          <input id="random-amount" type="number" name="amount" value="2" />
+          <button
+            type="button"
+            id="quantity--amount-add"
+            class="randomize__quantity"
+          >
+            <svg
+              class="randomize__quantity--icon"
+              width="20"
+              height="20"
+              aria-label="plus"
+            >
+              <use href="./images/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </div>
 
-      <input
-        type="checkbox"
-        id="duplicates-checkbox"
-        name="duplicates-checkbox"
-        value="duplicates"
-      />
-      <label for="duplicates-checkbox">Allow duplicates</label>
+        <select id="sort-type" name="sort-type">
+          <option value="1">None</option>
+          <option value="2">Ascending</option>
+          <option value="3">Descending</option>
+        </select>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          id="duplicates-checkbox"
+          name="duplicates-checkbox"
+          value="duplicates"
+        />
+        <label for="duplicates-checkbox">Allow duplicates</label>
+      </div>
     </div>
 
     <div class="randomize__buttons">
