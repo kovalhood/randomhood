@@ -14,6 +14,8 @@ const sectionDice = document.querySelector('#section-dice');
 const sectionCoin = document.querySelector('#section-coin');
 const sectionPassword = document.querySelector('#section-password');
 
+const themeSelector = document.querySelector('meta[name="theme-color"]');
+
 // Click on Open/Close Handlers
 openMobileMenu.addEventListener('click', menuOpenHandler);
 closeMobileMenu.addEventListener('click', menuCloseHandler);
@@ -27,10 +29,12 @@ mobileNavPassword.addEventListener('click', handleMobilePasswordClick);
 
 function menuOpenHandler() {
     mobileMenuEl.classList.add('is-open');
+    themeSelector.setAttribute("content", "#6b48f2");
 }
 
 function menuCloseHandler() {
     mobileMenuEl.classList.remove('is-open');
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileNavNumberClick() {
@@ -47,6 +51,7 @@ function handleMobileNavNumberClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileYesNoClick() {
@@ -63,6 +68,7 @@ function handleMobileYesNoClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileDiceClick() {
@@ -79,6 +85,7 @@ function handleMobileDiceClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobileCoinClick() {
@@ -95,6 +102,7 @@ function handleMobileCoinClick() {
     sectionPassword.classList.add('hidden');
 
     mobileMenuEl.classList.remove('is-open');
+    themeSelector.setAttribute("content", "#ffffff");
 }
 
 function handleMobilePasswordClick() {
@@ -111,4 +119,5 @@ function handleMobilePasswordClick() {
     sectionPassword.classList.remove('hidden');
 
     mobileMenuEl.classList.remove('is-open');
+    themeSelector.setAttribute("content", "#ffffff");
 }
