@@ -45,17 +45,40 @@
     font-size: 20px;
     cursor: pointer;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: #fff;
+        background-color: $accent-color;
+    }
+
+    &--icon {
+        fill: currentColor;
+    }
 }
 
-.randomize__quantity:hover,
-.randomize__quantity:focus{
-    outline: none;
-    color: #fff;
-    background-color: $accent-color;
-}
+.randomize__quantity--disabled{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: $button-disabled;
+    background-color: $button-disabled-text;
+    border-radius: 40px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.randomize__quantity--icon{
-    fill: currentColor;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+
+    &--icon {
+        fill: currentColor;
+    }
 }
 
 #random-from,

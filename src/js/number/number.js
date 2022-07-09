@@ -1,4 +1,4 @@
-import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox } from './refs';
+import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, quantity } from './refs';
 
 const randomizeButton = document.querySelector('.randomize__button--generate');
 const resetButton = document.querySelector('.randomize__button--reset');
@@ -32,12 +32,30 @@ function handleReset() {
 
     inputFrom.value = 1;
     inputTo.value = 10;
-    inputAmount.value = 1;
+    inputAmount.value = 2;
     sortType.value = '1';
     duplicatesCheckbox.checked = false;
 
-    sortType.disabled = true;
-    duplicatesCheckbox.disabled = true;
+    quantity.fromRemove.classList.add('randomize__quantity');
+    quantity.fromRemove.classList.remove('randomize__quantity--disabled');
+    quantity.fromRemove.disabled = false;
+    quantity.fromAdd.classList.add('randomize__quantity');
+    quantity.fromAdd.classList.remove('randomize__quantity--disabled');
+    quantity.fromAdd.disabled = false;
+
+    quantity.toRemove.classList.add('randomize__quantity');
+    quantity.toRemove.classList.remove('randomize__quantity--disabled');
+    quantity.toRemove.disabled = false;
+    quantity.toAdd.classList.add('randomize__quantity');
+    quantity.toAdd.classList.remove('randomize__quantity--disabled');
+    quantity.toAdd.disabled = false;
+
+    quantity.amountRemove.classList.remove('randomize__quantity');
+    quantity.amountRemove.classList.add('randomize__quantity--disabled');
+    quantity.amountRemove.disabled = true;
+    quantity.amountAdd.classList.add('randomize__quantity');
+    quantity.amountAdd.classList.remove('randomize__quantity--disabled');
+    quantity.amountAdd.disabled = false;
 }
 
 function numbersGeneration(from, to, amount) {
