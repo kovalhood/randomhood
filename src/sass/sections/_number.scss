@@ -38,9 +38,6 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    // min-width: 40px;
-    // width: 40px;
-    // height: 40px;
     color: $accent-color;
     background-color: $button-secondary-color;
     border-radius: 40px;
@@ -61,7 +58,8 @@
     fill: currentColor;
 }
 
-#random-from{
+#random-from,
+#random-to{
     margin: 0 20px;
     padding: 15px;
     font-size: 16px;
@@ -73,13 +71,16 @@
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.randomize__input-wrapper:hover #random-from{
+.randomize__input-wrapper:hover #random-from,
+.randomize__input-wrapper:hover #random-to{
     outline: none;
     border: 2px solid $input-border;
 }
 
 .randomize__input-wrapper:hover #random-from:focus,
-#random-from:focus{
+.randomize__input-wrapper:hover #random-to:focus,
+#random-from:focus,
+#random-to:focus{
     outline: none;
     border: 2px solid $accent-color;
 }

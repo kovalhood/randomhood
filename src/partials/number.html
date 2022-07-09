@@ -36,14 +36,40 @@
         </svg>
       </button>
     </div>
-    <input
-      id="random-to"
-      type="number"
-      min="1"
-      max="10000"
-      name="to"
-      value="10"
-    />
+    <div class="randomize__input-wrapper">
+      <button
+        type="button"
+        id="quantity--to-remove"
+        class="randomize__quantity"
+      >
+        <svg
+          class="randomize__quantity--icon"
+          width="20"
+          height="20"
+          aria-label="minus"
+        >
+          <use href="./images/icons.svg#minus"></use>
+        </svg>
+      </button>
+      <input
+        id="random-to"
+        type="number"
+        min="1"
+        max="10000"
+        name="to"
+        value="10"
+      />
+      <button type="button" id="quantity--to-add" class="randomize__quantity">
+        <svg
+          class="randomize__quantity--icon"
+          width="20"
+          height="20"
+          aria-label="plus"
+        >
+          <use href="./images/icons.svg#plus"></use>
+        </svg>
+      </button>
+    </div>
     <input
       id="random-amount"
       type="number"
