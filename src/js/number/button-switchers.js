@@ -1,5 +1,6 @@
 import { quantity } from './refs';
 
+// From quantity buttons
 function fromRemoveButtonOff() {
     quantity.fromRemove.classList.remove('randomize__quantity');
     quantity.fromRemove.classList.add('randomize__quantity--disabled');
@@ -24,6 +25,12 @@ function fromAddButtonOn() {
     quantity.fromAdd.disabled = false;
 }
 
+function defaultFromQuantityButtons() {
+    fromRemoveButtonOn();
+    fromAddButtonOn();
+}
+
+// To quantity buttons
 function toRemoveButtonOff() {
     quantity.toRemove.classList.remove('randomize__quantity');
     quantity.toRemove.classList.add('randomize__quantity--disabled');
@@ -48,6 +55,12 @@ function toAddButtonOn() {
     quantity.toAdd.disabled = false;
 }
 
+function defaultToQuantityButtons() {
+    toRemoveButtonOn();
+    toAddButtonOn();
+}
+
+// Amount quantity buttons
 function amountRemoveButtonOff() {
     quantity.amountRemove.classList.remove('randomize__quantity');
     quantity.amountRemove.classList.add('randomize__quantity--disabled');
@@ -72,8 +85,13 @@ function amountAddButtonOn() {
     quantity.amountAdd.disabled = false;
 }
 
+function defaultAmountQuantityButtons() {
+    amountRemoveButtonOff();
+    amountAddButtonOn();
+}
+
 export {
-    fromRemoveButtonOff, fromRemoveButtonOn, fromAddButtonOff, fromAddButtonOn,
-    toRemoveButtonOff, toRemoveButtonOn, toAddButtonOff, toAddButtonOn,
-    amountRemoveButtonOff, amountRemoveButtonOn, amountAddButtonOff, amountAddButtonOn
+    fromRemoveButtonOff, fromRemoveButtonOn, fromAddButtonOff, fromAddButtonOn, defaultFromQuantityButtons,
+    toRemoveButtonOff, toRemoveButtonOn, toAddButtonOff, toAddButtonOn, defaultToQuantityButtons,
+    amountRemoveButtonOff, amountRemoveButtonOn, amountAddButtonOff, amountAddButtonOn, defaultAmountQuantityButtons
 };
