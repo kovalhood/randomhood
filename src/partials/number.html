@@ -69,48 +69,46 @@
     <button type="button" id="amount-switcher">Multiple numbers</button>
     <!-- Multiple numbers generation -->
     <div class="randomize__multiple hidden">
-      <div class="randomize__multiple--amount">
-        <div class="randomize__input-wrapper">
-          <button
-            type="button"
-            id="quantity--amount-remove"
-            class="randomize__quantity--disabled"
-            disabled="true"
+      <div class="randomize__input-wrapper randomize__input-wrapper--amount">
+        <button
+          type="button"
+          id="quantity--amount-remove"
+          class="randomize__quantity--disabled"
+          disabled="true"
+        >
+          <svg
+            class="randomize__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="minus"
           >
-            <svg
-              class="randomize__quantity--icon"
-              width="20"
-              height="20"
-              aria-label="minus"
-            >
-              <use href="./images/icons.svg#minus"></use>
-            </svg>
-          </button>
-          <input id="random-amount" type="number" name="amount" value="1" />
-          <button
-            type="button"
-            id="quantity--amount-add"
-            class="randomize__quantity"
+            <use href="./images/icons.svg#minus"></use>
+          </svg>
+        </button>
+        <input id="random-amount" type="number" name="amount" value="1" />
+        <button
+          type="button"
+          id="quantity--amount-add"
+          class="randomize__quantity"
+        >
+          <svg
+            class="randomize__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="plus"
           >
-            <svg
-              class="randomize__quantity--icon"
-              width="20"
-              height="20"
-              aria-label="plus"
-            >
-              <use href="./images/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </div>
+            <use href="./images/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </div>
 
+      <div class="randomize__multiple--settings">
         <select id="sort-type" name="sort-type">
           <option value="1">None</option>
           <option value="2">Ascending</option>
           <option value="3">Descending</option>
         </select>
-      </div>
 
-      <div>
         <input
           type="checkbox"
           id="duplicates-checkbox"

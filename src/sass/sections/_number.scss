@@ -30,26 +30,26 @@
     align-items: center;
     width: 100%;
 
-    @media screen and (min-width: $tablet) {
-        width: 80%;
+    & div:first-child {
+        margin: 0 0 20px 0;
     }
 
-    &--amount{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 20px;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        width: 80%;
 
         & div:first-child {
-            margin: 0 0 20px 0;
+            margin: 0 20px 0 0;
         }
+    }
 
-        @media screen and (min-width: $tablet) {
-            flex-direction: row;
+    &--settings{
+        display: flex;
+        align-items: center;
+        width: 100%;
 
-            & div:first-child {
-                margin: 0 20px 0 0;
-            }
+        & select {
+            margin: 0 20px 0 0;
         }
     }
 }
@@ -80,7 +80,16 @@
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    // transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--amount{
+        @media screen and (min-width:$tablet) {
+            width: 92.75%;
+        }
+
+        @media screen and (min-width:$desktop) {
+            width: 95.54%;
+        }
+    }
 }
 
 .randomize__quantity{
@@ -167,7 +176,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     text-align: center;
     line-height: normal;
