@@ -1,4 +1,5 @@
 import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, quantity } from './refs';
+import { multipleNumbers } from './amount-switcher';
 
 const randomizeButton = document.querySelector('.randomize__button--generate');
 const resetButton = document.querySelector('.randomize__button--reset');
@@ -21,8 +22,6 @@ function getRandomNumber(min, max) {
 function handleRandomize() {
     numbersGeneration(inputFrom.value, inputTo.value, inputAmount.value);
     generatedNumbers = [];
-    // console.log(sortType.value);
-    // console.log(duplicatesCheckbox.checked);
 }
 
 // Setting default values to our elements
@@ -32,7 +31,9 @@ function handleReset() {
 
     inputFrom.value = 1;
     inputTo.value = 10;
-    inputAmount.value = 2;
+    
+    multipleNumbers ? inputAmount.value = 2 : inputAmount.value = 1;
+
     sortType.value = '1';
     duplicatesCheckbox.checked = false;
 
