@@ -11,7 +11,11 @@
     }
 
     @media screen and (min-width:$tablet) {
-        width: 80%;
+        width: 46%;
+    }
+
+    @media screen and (min-width:$desktop) {
+        width: 41%;
     }
 }
 
