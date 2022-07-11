@@ -5,7 +5,7 @@
     align-items: center;
     width: 100%;
 
-    &--controlls{
+    &--controls{
         display: flex;
         width: 100%;
     }
@@ -43,10 +43,6 @@
             margin-bottom: 0;
             margin-right: 20px;
             width: 92.75%;
-
-            &:focus {
-                background-color: $button-hover;
-            }
         }
     
         @media screen and (min-width:$desktop) {
@@ -64,25 +60,13 @@
         }
     }
 
+    &--reset{
+        background-color: #fff;
+    }
+
     &--amount {
         background-color: $button-secondary-color;
         margin-right: 20px;
-
-        @media screen and (min-width:$tablet) {
-            &:focus {
-                background-color: $button-secondary-color-hover;
-            }
-        }
-    }
-
-    &--reset{
-        background-color: #fff;
-
-        @media screen and (min-width:$tablet) {
-            &:focus {
-                background-color: $button-disabled-text;
-            }
-        }
     }
 
     &--generate:focus,
@@ -91,16 +75,33 @@
         outline: none;
     }
 
-    &--generate:hover {
+    // &--generate:hover,
+    &--generate:focus {
         background-color: $button-hover;
     }
 
 
-    &--amount:hover{
+    // &--amount:hover,
+    &--amount:focus{
         background-color: $button-secondary-color-hover;
     }
 
-    &--reset:hover {
+    // &--reset:hover,
+    &--reset:focus {
+        background-color: $button-disabled-text;
+    }
+}
+
+@media (hover: hover) {
+    .randomize__button--generate:hover {
+        background-color: $button-hover;
+    }
+
+    .randomize__button--amount:hover {
+        background-color: $button-secondary-color-hover;
+    }
+
+    .randomize__button--reset:hover {
         background-color: $button-disabled-text;
     }
 }
