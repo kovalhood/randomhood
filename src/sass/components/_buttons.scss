@@ -42,11 +42,15 @@
     &--amount,
     &--reset {
         color: $accent-color;
-        background-color: #fff;
         padding: 15px;
     }
 
+    &--reset{
+        background-color: #fff;
+    }
+
     &--amount {
+        background-color: $button-secondary-color;
         margin-right: 20px;
     }
 
@@ -67,7 +71,7 @@
 
     &--amount:hover,
     &--amount:focus{
-        background-color: $button-secondary-color;
+        background-color: $button-secondary-color-hover;
     }
 
     &--reset:hover,

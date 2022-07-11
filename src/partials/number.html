@@ -10,6 +10,7 @@
           type="button"
           id="quantity--from-remove"
           class="randomize__quantity"
+          onclick="this.blur();"
         >
           <svg
             class="randomize__quantity--icon"
@@ -25,6 +26,7 @@
           type="button"
           id="quantity--from-add"
           class="randomize__quantity"
+          onclick="this.blur();"
         >
           <svg
             class="randomize__quantity--icon"
@@ -42,6 +44,7 @@
           type="button"
           id="quantity--to-remove"
           class="randomize__quantity"
+          onclick="this.blur();"
         >
           <svg
             class="randomize__quantity--icon"
@@ -53,7 +56,12 @@
           </svg>
         </button>
         <input id="random-to" type="number" name="to" value="10" />
-        <button type="button" id="quantity--to-add" class="randomize__quantity">
+        <button
+          type="button"
+          id="quantity--to-add"
+          class="randomize__quantity"
+          onclick="this.blur();"
+        >
           <svg
             class="randomize__quantity--icon"
             width="20"
@@ -74,6 +82,7 @@
           id="quantity--amount-remove"
           class="randomize__quantity--disabled"
           disabled="true"
+          onclick="this.blur();"
         >
           <svg
             class="randomize__quantity--icon"
@@ -89,6 +98,7 @@
           type="button"
           id="quantity--amount-add"
           class="randomize__quantity"
+          onclick="this.blur();"
         >
           <svg
             class="randomize__quantity--icon"
@@ -122,6 +132,7 @@
       <button
         type="button"
         class="randomize__button randomize__button--generate"
+        onclick="this.blur();"
       >
         Generate
       </button>
@@ -131,12 +142,14 @@
           type="button"
           id="amount-switcher"
           class="randomize__button randomize__button--amount"
+          onclick="this.blur();"
         >
           Multiple ▼
         </button>
         <button
           type="button"
           class="randomize__button randomize__button--reset"
+          onclick="this.blur();"
         >
           Reset
         </button>
