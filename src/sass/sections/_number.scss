@@ -57,6 +57,10 @@
         width: 100%;
         margin-bottom: 20px;
 
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 0;
+        }
+
         & select {
             margin: 0 20px 0 0;
             max-width: 50%;
@@ -173,7 +177,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 25px;
+    padding: 18px;
     border-radius: 8px;
     text-align: center;
     line-height: normal;
@@ -181,6 +185,10 @@
     background-color: #fff;
     box-shadow: $main-box-shadow;
     cursor: pointer;
+
+    @media screen and (min-width:$tablet) {
+        padding: 25px
+    }
 }
 
 #sort-type:focus{
