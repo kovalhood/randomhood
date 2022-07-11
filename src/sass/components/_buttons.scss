@@ -92,6 +92,7 @@
     }
 }
 
+// prevent sticky hover effects for buttons on touch devices
 @media (hover: hover) {
     .randomize__button--generate:hover {
         background-color: $button-hover;
