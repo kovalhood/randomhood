@@ -10,14 +10,15 @@ amountSwitcher.addEventListener('click', handleAmountSwitch);
 function handleAmountSwitch() {
     multipleNumbers = !multipleNumbers;
 
-    console.log(multipleNumbers);
     if (multipleNumbers === true) {
         multipleWrapper.classList.remove('hidden')
+        amountSwitcher.textContent = "Single ▲"
         inputAmount.value = 2;
     }
 
     if (multipleNumbers === false) {
         multipleWrapper.classList.add('hidden');
+        amountSwitcher.textContent = "Multiple ▼"
         inputAmount.value = 1;
     }
 }
