@@ -29,6 +29,11 @@ html {
   scroll-behavior: smooth;
 }
 
+// Disable double-tap "zoom" option in browser on touch devices
+* {
+  touch-action: manipulation;
+}
+
 *,
 *::after,
 *::before {
