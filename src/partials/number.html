@@ -66,7 +66,6 @@
       </div>
     </div>
 
-    <button type="button" id="amount-switcher">Multiple numbers</button>
     <!-- Multiple numbers generation -->
     <div class="randomize__multiple hidden">
       <div class="randomize__input-wrapper randomize__input-wrapper--amount">
@@ -126,9 +125,22 @@
       >
         Generate
       </button>
-      <button type="button" class="randomize__button randomize__button--reset">
-        Reset
-      </button>
+
+      <div class="randomize__buttons--controlls">
+        <button
+          type="button"
+          id="amount-switcher"
+          class="randomize__button randomize__button--amount"
+        >
+          Multiple ▼
+        </button>
+        <button
+          type="button"
+          class="randomize__button randomize__button--reset"
+        >
+          Reset
+        </button>
+      </div>
     </div>
 
     <div class="randomize__number-wrapper hidden">

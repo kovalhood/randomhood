@@ -1,0 +1,72 @@
+.randomize__buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &--controlls{
+        display: flex;
+        width: 100%;
+    }
+
+    @media screen and (min-width:$tablet) {
+        width: 80%;
+    }
+}
+
+.randomize__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    box-shadow: $main-box-shadow;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &--generate{
+        color: #fff;
+        background-color: $accent-color;
+        margin-bottom: 20px;
+    }
+
+    &--amount,
+    &--reset {
+        color: $accent-color;
+        background-color: #fff;
+    }
+
+    &--amount {
+        margin-right: 20px;
+    }
+
+    &--generate:hover,
+    &--generate:focus,
+    &--amount:hover,
+    &--amount:focus,
+    &--reset:hover,
+    &--reset:focus{
+        outline: none;
+    }
+
+    &--generate:hover,
+    &--generate:focus {
+        background-color: $button-hover;
+    }
+
+
+    &--amount:hover,
+    &--amount:focus{
+        background-color: $button-secondary-color;
+    }
+
+    &--reset:hover,
+    &--reset:focus {
+        background-color: $button-disabled-text;
+    }
+}

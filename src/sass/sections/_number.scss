@@ -16,11 +16,15 @@
 
     @media screen and (min-width: $tablet) {
         flex-direction: row;
-        width: 80%;
+        width: 90%;
 
         & div:first-child {
             margin: 0 20px 0 0;
         }
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 80%;
     }
 }
 
@@ -36,34 +40,27 @@
 
     @media screen and (min-width: $tablet) {
         flex-direction: row;
-        width: 80%;
+        width: 90%;
 
         & div:first-child {
             margin: 0 20px 0 0;
         }
     }
 
+    @media screen and (min-width: $desktop) {
+        width: 80%;
+    }
+
     &--settings{
         display: flex;
         align-items: center;
         width: 100%;
+        margin-bottom: 20px;
 
         & select {
             margin: 0 20px 0 0;
+            max-width: 50%;
         }
-    }
-}
-
-.randomize__buttons{
-    display: flex;
-    margin: 10px 0;
-}
-
-.randomize__button{
-    cursor: pointer;
-
-    &:not(:last-child){
-        margin-right: 10px;
     }
 }
 
@@ -79,7 +76,7 @@
     padding: 10px 20px;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: $main-box-shadow;
 
     &--amount{
         @media screen and (min-width:$tablet) {
@@ -182,7 +179,7 @@
     line-height: normal;
     border: none;
     background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: $main-box-shadow;
     cursor: pointer;
 }
 
