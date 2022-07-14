@@ -244,6 +244,18 @@
     margin: 0;
 }
 
+.randomize__number-wrapper{
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+        width: 90%;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        width: 80%;
+    }
+}
+
 .randomize__number-text {
     color: $text-black;
     margin-bottom: 10px;
@@ -252,6 +264,7 @@
 .randomize__number {
     font-size: 60px;
     font-weight: 700;
+    
     color: $accent-color;
     text-shadow: $main-box-shadow;
 
