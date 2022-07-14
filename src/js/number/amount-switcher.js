@@ -13,6 +13,7 @@ function handleAmountSwitch() {
     multipleNumbers = !multipleNumbers;
 
     if (multipleNumbers === true) {
+        multipleWrapper.classList.remove('hidden-multiple');
         appearWrapper.classList.add('appear-wrapper--show');
         sectionTitle.textContent = "Generate random numbers";
         amountSwitcher.textContent = "Single ▲";
@@ -20,10 +21,14 @@ function handleAmountSwitch() {
     }
 
     if (multipleNumbers === false) {
-        appearWrapper.classList.remove('appear-wrapper--show');
-        sectionTitle.textContent = "Generate random number";
-        amountSwitcher.textContent = "Multiple ▼";
-        inputAmount.value = 1;
+        multipleWrapper.classList.add('hidden-multiple');
+        
+        setTimeout(() => {
+            appearWrapper.classList.remove('appear-wrapper--show');
+            sectionTitle.textContent = "Generate random number";
+            amountSwitcher.textContent = "Multiple ▼";
+            inputAmount.value = 1;
+        }, 100);
     }
 }
 
