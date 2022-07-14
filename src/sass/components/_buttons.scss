@@ -38,6 +38,7 @@
         color: #fff;
         background-color: $accent-color;
         margin-bottom: 20px;
+        height: 60px;
 
         @media screen and (min-width:$tablet) {
             margin-bottom: 0;
@@ -54,9 +55,11 @@
     &--reset {
         color: $accent-color;
         padding: 15px;
+        height: 50px;
 
         @media screen and (min-width:$tablet) {
             padding: 20px;
+            height: 60px;
         }
     }
 
