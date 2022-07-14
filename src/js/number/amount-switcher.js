@@ -13,7 +13,6 @@ function handleAmountSwitch() {
     multipleNumbers = !multipleNumbers;
 
     if (multipleNumbers === true) {
-        multipleWrapper.classList.remove('amount-hidden');
         appearWrapper.classList.add('appear-wrapper--show');
         sectionTitle.textContent = "Generate random numbers";
         amountSwitcher.textContent = "Single ▲";
@@ -21,7 +20,6 @@ function handleAmountSwitch() {
     }
 
     if (multipleNumbers === false) {
-        multipleWrapper.classList.add('amount-hidden');
         appearWrapper.classList.remove('appear-wrapper--show');
         sectionTitle.textContent = "Generate random number";
         amountSwitcher.textContent = "Multiple ▼";

@@ -17,6 +17,11 @@
         margin-top: 0;
     }
 
+    &--show .randomize__multiple {
+        visibility: visible;
+        opacity: 100%;
+    }
+
     @media screen and (min-width: $tablet) {
         margin-top: -90px;
 
@@ -26,18 +31,13 @@
     }
 }
 
-.amount-hidden{
-    visibility: hidden;
-    opacity:0;
-}
-
 .randomize__single{
     display: flex;
     flex-direction: column;
     background-color: #fff;
     width: 100%;
     margin-bottom: 20px;
-    z-index: 20;
+    z-index: 100;
 
     & div:first-child {
         margin: 0 0 20px 0;
@@ -58,12 +58,14 @@
 }
 
 .randomize__multiple{
+    visibility: hidden;
+    opacity: 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
-    // opacity: 100%;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     & div:first-child {
