@@ -250,8 +250,12 @@
 }
 
 .randomize__number {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 700;
     color: $accent-color;
     text-shadow: $main-box-shadow;
+
+    &--multiple{
+        font-size: 40px;
+    }
 }
