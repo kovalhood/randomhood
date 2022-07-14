@@ -220,6 +220,7 @@
     align-items: center;
     width: 100%;
     height: 60px;
+    padding: 0 20px;
     border-radius: 8px;
     color: $text-black;
     text-align: center;
@@ -243,4 +244,16 @@
 #sort-type option {
     padding: 0;
     margin: 0;
+}
+
+.randomize__number-text {
+    color: $text-black;
+    margin-bottom: 10px;
+}
+
+.randomize__number{
+    font-size: 40px;
+    font-weight: 700;
+    color: $accent-color;
+    text-shadow: $main-box-shadow;
 }
