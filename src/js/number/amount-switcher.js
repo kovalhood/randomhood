@@ -37,6 +37,7 @@ function handleAmountSwitch() {
         sectionTitle.textContent = "Generate random number";
         amountSwitcher.textContent = "Multiple ▼";
         
+        // Setting timeout for correct work on iOS
         setTimeout(() => {
             appearWrapper.classList.remove('appear-wrapper--show');
         }, 100);
