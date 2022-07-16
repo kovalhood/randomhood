@@ -15,7 +15,6 @@ function handleAmountSwitch() {
     multipleNumbers = !multipleNumbers;
 
     if (multipleNumbers === true) {
-        // multipleWrapper.classList.remove('hidden-multiple');
         appearWrapper.classList.add('appear-wrapper--show');
         numberWrapper.classList.add('hidden');
         resultEl.classList.add('randomize__number--multiple');
