@@ -23,6 +23,7 @@
             </svg>
           </button>
           <input id="random-from" type="number" name="from" value="1" />
+          <label class="randomize__input-label" for="random-from">From</label>
           <button
             type="button"
             id="quantity--from-add"
@@ -57,6 +58,7 @@
             </svg>
           </button>
           <input id="random-to" type="number" name="to" value="10" />
+          <label class="randomize__input-label" for="random-to">To</label>
           <button
             type="button"
             id="quantity--to-add"
@@ -98,6 +100,9 @@
               </svg>
             </button>
             <input id="random-amount" type="number" name="amount" value="1" />
+            <label class="randomize__input-label" for="random-amount"
+              >Amount</label
+            >
             <button
               type="button"
               id="quantity--amount-add"
@@ -116,11 +121,14 @@
           </div>
 
           <div class="randomize__multiple--settings">
-            <select id="sort-type" name="sort-type">
-              <option value="1">None</option>
-              <option value="2">Ascending</option>
-              <option value="3">Descending</option>
-            </select>
+            <div class="randomize__select-wrapper">
+              <select id="sort-type" name="sort-type">
+                <option value="1">None</option>
+                <option value="2">Ascending</option>
+                <option value="3">Descending</option>
+              </select>
+              <label class="randomize__input-label" for="sort-type">Sort</label>
+            </div>
 
             <input
               type="checkbox"
