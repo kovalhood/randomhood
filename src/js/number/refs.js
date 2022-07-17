@@ -3,6 +3,8 @@ const inputTo = document.querySelector('#random-to');
 const inputAmount = document.querySelector('#random-amount');
 const sortType = document.querySelector('#sort-type');
 const duplicatesCheckbox = document.querySelector('#duplicates-checkbox');
+const wrapperDuplicatesCheckbox = document.querySelector('.randomize__checkbox-wrapper');
+const labelDuplicatesCheckbox = document.querySelector('.randomize__checkbox-label');
 
 const quantity = {
     fromRemove: document.querySelector('#quantity--from-remove'),
@@ -13,4 +15,4 @@ const quantity = {
     amountAdd: document.querySelector('#quantity--amount-add'),
 }
 
-export { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, quantity };
+export { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, wrapperDuplicatesCheckbox, labelDuplicatesCheckbox, quantity };

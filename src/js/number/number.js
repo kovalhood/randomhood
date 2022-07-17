@@ -1,4 +1,4 @@
-import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, quantity } from './refs';
+import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, labelDuplicatesCheckbox, quantity } from './refs';
 import { multipleNumbers } from './amount-switcher';
 import { defaultFromQuantityButtons, defaultToQuantityButtons, defaultAmountQuantityButtons } from './button-switchers';
 
@@ -35,7 +35,9 @@ function handleReset() {
     multipleNumbers ? inputAmount.value = 2 : inputAmount.value = 1;
 
     sortType.value = '1';
+    document.querySelector('.js-fake-input').value = 'None';
     duplicatesCheckbox.checked = false;
+    labelDuplicatesCheckbox.textContent = 'Off'
 
     defaultFromQuantityButtons();
     defaultToQuantityButtons();

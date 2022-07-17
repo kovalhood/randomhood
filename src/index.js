@@ -5,3 +5,4 @@ import './js/number/number';
 import './js/number/inputs-logic';
 import './js/number/sorting';
 import './js/number/amount-switcher';
+import './js/number/duplicates-checkbox';
