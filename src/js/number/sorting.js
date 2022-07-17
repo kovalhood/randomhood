@@ -20,5 +20,5 @@ function getSelected(i){
 sortingEl.addEventListener('change', handleSelectChange);
 
 function handleSelectChange() {
-    sortingEl.blur();
+    document.activeElement.blur();
 }
