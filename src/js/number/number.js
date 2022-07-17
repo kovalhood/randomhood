@@ -36,6 +36,7 @@ function handleReset() {
 
     sortType.value = '1';
     document.querySelector('.js-fake-input').value = 'None';
+    document.querySelector('.js-fake-input').classList.remove('sort--selected')
     duplicatesCheckbox.checked = false;
     labelDuplicatesCheckbox.classList.remove('randomize__checkbox-label--on');
     labelDuplicatesCheckbox.textContent = 'Off';
