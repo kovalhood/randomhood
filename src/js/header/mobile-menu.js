@@ -30,11 +30,13 @@ mobileNavPassword.addEventListener('click', handleMobilePasswordClick);
 function menuOpenHandler() {
     mobileMenuEl.classList.add('is-open');
     themeSelector.setAttribute("content", "#6b48f2");
+    document.body.style.overflow = 'hidden';
 }
 
 function menuCloseHandler() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+    document.body.style.overflow = 'visible';
 }
 
 function handleMobileNavNumberClick() {

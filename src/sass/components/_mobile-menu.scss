@@ -49,11 +49,11 @@
 }
 
 .mobile-nav-menu__wrapper {
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
     padding: 50px;
     height: 100vh;
     width: 100vw;
@@ -65,13 +65,16 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &.is-open {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         // transform: translateY(0);
         transform: translateX(0);
     }
 
     @media screen and (min-width: $tablet) {
         display: none;
+    }
+
+    @media screen and (max-height: 430px) {
+        overflow-y: scroll;
     }
 }
 
