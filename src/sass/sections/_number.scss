@@ -247,10 +247,17 @@
     box-shadow: $main-box-shadow;
 }
 
-.randomize__select-wrapper:hover .randomize__input-label,
+
 #sort-type:focus ~ .randomize__input-label{
     visibility: hidden;
     opacity: 0;
+}
+
+@media (hover: hover) {
+    .randomize__select-wrapper:hover .randomize__input-label {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 .randomize__select-wrapper select{
@@ -346,7 +353,11 @@
     color:rgb(62, 170, 62);
 }
 
-.randomize__checkbox-label:hover ~ .randomize__input-label{
-    visibility: hidden;
-    opacity: 0;
+
+
+@media (hover: hover) {
+    .randomize__checkbox-label:hover~.randomize__input-label {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
