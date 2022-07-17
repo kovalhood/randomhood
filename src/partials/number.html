@@ -122,11 +122,13 @@
 
           <div class="randomize__multiple--settings">
             <div class="randomize__select-wrapper">
-              <select id="sort-type" name="sort-type">
+              <select id="sort-type" class="js-select" name="sort-type">
                 <option value="1">None</option>
                 <option value="2">Ascending</option>
                 <option value="3">Descending</option>
               </select>
+              <!-- This input is created for centering text on iOS Safari -->
+              <input type="text" class="js-fake-input" />
               <label class="randomize__input-label" for="sort-type">Sort</label>
             </div>
 
