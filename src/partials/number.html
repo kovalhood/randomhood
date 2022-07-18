@@ -126,6 +126,7 @@
                 <option value="2">Ascending</option>
                 <option value="3">Descending</option>
               </select>
+
               <!-- This input is created for centering text on iOS Safari -->
               <input type="text" class="js-fake-input" />
               <label class="randomize__input-label" for="sort-type">Sort</label>
@@ -163,7 +164,25 @@
               class="randomize__button randomize__button--amount"
               onclick="this.blur();"
             >
-              Multiple ▼
+              <span class="amount-switcher--text">Multiple</span>
+              <svg
+                id="amount-icon--down"
+                class="amount-switcher--icon"
+                width="20"
+                height="20"
+                aria-label="down"
+              >
+                <use href="./images/icons.svg#arrow-down"></use>
+              </svg>
+              <svg
+                id="amount-icon--up"
+                class="amount-switcher--icon hidden-icon"
+                width="20"
+                height="20"
+                aria-label="down"
+              >
+                <use href="./images/icons.svg#arrow-up"></use>
+              </svg>
             </button>
             <button
               type="button"

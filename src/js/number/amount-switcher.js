@@ -1,6 +1,9 @@
 import { inputAmount } from "./refs";
 
 const amountSwitcher = document.querySelector('#amount-switcher');
+const textSwitcher = document.querySelector('.amount-switcher--text');
+const iconDown = document.querySelector('#amount-icon--down');
+const iconUp = document.querySelector('#amount-icon--up');
 const multipleWrapper = document.querySelector('.randomize__multiple');
 const sectionTitle = document.querySelector('.section__title');
 const appearWrapper = document.querySelector('.appear-wrapper');
@@ -20,7 +23,9 @@ function handleAmountSwitch() {
         resultEl.classList.add('randomize__number--multiple');
 
         sectionTitle.textContent = "Generate random numbers";
-        amountSwitcher.textContent = "Single ▲";
+        textSwitcher.innerText = "Single";
+        iconDown.classList.add('hidden-icon');
+        iconUp.classList.remove('hidden-icon');
         inputAmount.value = 2;
 
         setTimeout(() => {
@@ -34,7 +39,9 @@ function handleAmountSwitch() {
         resultEl.classList.remove('randomize__number--multiple');
 
         sectionTitle.textContent = "Generate random number";
-        amountSwitcher.textContent = "Multiple ▼";
+        textSwitcher.innerText = "Multiple";
+        iconDown.classList.remove('hidden-icon');
+        iconUp.classList.add('hidden-icon');
         
         // Setting timeout for correct work on iOS
         setTimeout(() => {
