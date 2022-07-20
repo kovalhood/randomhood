@@ -2,6 +2,8 @@ import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, labelDup
 import { multipleNumbers } from './amount-switcher';
 import { defaultFromQuantityButtons, defaultToQuantityButtons, defaultAmountQuantityButtons } from './button-switchers';
 
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 const randomizeButton = document.querySelector('.randomize__button--generate');
 const resetButton = document.querySelector('.randomize__button--reset');
 
@@ -49,33 +51,28 @@ function handleReset() {
 function numbersGeneration(from, to, amount) {
     if (to - from <= 0) {
         handleReset();
-        return console.log('error');
+        return Notify.failure(`Start value cannot be equal or greater than end value`);
     }
     
     amount = Math.floor(amount);
 
     if (amount === 1) {
-        console.log('1')
         generatedNumbers.push(getRandomNumber(from, to));
     }
 
     if (amount > 1) {
-        console.log('>1')
         // Allow duplicates
         if (duplicatesCheckbox.checked) {
-            console.log('true')
             for (let i = 0; i < amount; i+=1) {
                 generatedNumbers.push(getRandomNumber(from, to));
             }
-            console.log(generatedNumbers);
         }
 
         // Disallow duplicates 
         else if (!duplicatesCheckbox.checked) {
-            console.log('false')
             if (to - from + 1 - amount < 0) {
                 handleReset();
-                return console.log('error');
+                return Notify.failure(`The amount of numbers cannot exceed the difference between the end and start values`);
             }
 
             for (let i = 0; i < amount; i+=1) {
@@ -91,7 +88,6 @@ function numbersGeneration(from, to, amount) {
 
                 generatedNumbers.push(randomNumber);
             }
-            console.log(generatedNumbers);
         }
 
         sortGeneratedNumbers(generatedNumbers);
@@ -105,21 +101,15 @@ function numbersGeneration(from, to, amount) {
 }
 
 function sortGeneratedNumbers(array) {
-    if (sortType.value === '1') {
-        console.log('None')
-        return console.log(array);
-    };
+    // if (sortType.value === '1') {
+    // };
 
     if (sortType.value === '2') {
-        console.log('Ascending')
         array.sort((a, b) => a - b);
-        return console.log(array);
     };
 
     if (sortType.value === '3') {
-        console.log('Descending')
         array.sort((a, b) => b - a);
-        return console.log(array);
     }
 }
 

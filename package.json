@@ -20,7 +20,9 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "lodash.throttle": "^4.1.1",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
+    "toastify-js": "^1.11.2"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.6.0",

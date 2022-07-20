@@ -20,7 +20,6 @@ function getSelected(i){
 sortingEl.addEventListener('change', handleSelectChange);
 
 function handleSelectChange() {
-    console.log(fakeInputEl.value);
     fakeInputEl.value === 'None' ? fakeInputEl.classList.remove('sort--selected') : fakeInputEl.classList.add('sort--selected');
     this.blur();
 }
