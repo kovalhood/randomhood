@@ -5,7 +5,6 @@
         margin-top: auto;
         display: flex;
         align-items: center;
-        height: 70px;
         padding: 16px 0;
         background-color: white;
         box-shadow: 0 -1px 3px rgba(107, 72, 242, 0.12),
@@ -16,9 +15,10 @@
 .social-footer {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 
     &__item+&__item {
-        margin-left: 10px;
+        margin-left: 20px;
     }
 }
 
@@ -44,4 +44,9 @@
 
 .social-footer__icon {
     fill: currentColor;
+}
+
+.footer__copyright{
+    font-size: 14px;
+    color: grey;
 }
