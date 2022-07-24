@@ -123,6 +123,10 @@
     &__item+&__item {
         margin-left: 20px;
     }
+
+    @media screen and (max-height: 430px) {
+        margin-bottom: 20px;
+    }
 }
 
 .mobile-social__link {
@@ -159,8 +163,13 @@
 }
 
 .mobile__copyright {
+    display: block;
     font-size: 14px;
     color: $button-secondary-color;
+
+    @media screen and (max-height: 430px) {
+        display: none;
+    }
 }
 
 .telegram-fix{
