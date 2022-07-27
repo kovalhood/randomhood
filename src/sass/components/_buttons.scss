@@ -80,18 +80,14 @@
         outline: none;
     }
 
-    // &--generate:hover,
     &--generate:focus {
         background-color: $button-hover;
     }
 
-
-    // &--amount:hover,
     &--amount:focus{
         background-color: $button-secondary-color-hover;
     }
 
-    // &--reset:hover,
     &--reset:focus {
         background-color: $button-disabled-text;
     }
