@@ -28,6 +28,7 @@ function handleAmountSwitch() {
         iconUp.classList.remove('hidden-icon');
         inputAmount.value = 2;
 
+        // Setting timeout for correct work on iOS
         setTimeout(() => {
             multipleWrapper.classList.remove('hidden-multiple');
         }, 100);
