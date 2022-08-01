@@ -11,6 +11,7 @@ const sectionDice = document.querySelector('#section-dice');
 const sectionCoin = document.querySelector('#section-coin');
 const sectionPassword = document.querySelector('#section-password');
 
+// Click on links in header
 navLogo.addEventListener('click', handleNavLogoClick);
 navNumber.addEventListener('click', handleNavNumberClick);
 navYesNo.addEventListener('click', handleYesNoClick);
@@ -18,6 +19,7 @@ navDice.addEventListener('click', handleDiceClick);
 navCoin.addEventListener('click', handleCoinClick);
 navPassword.addEventListener('click', handlePasswordClick);
 
+// Handlers for navigation links
 function handleNavLogoClick() {
     navNumber.classList.add('current');
     navYesNo.classList.remove('current');
