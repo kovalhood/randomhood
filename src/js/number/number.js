@@ -53,7 +53,7 @@ function numbersGeneration(from, to, amount) {
         handleReset();
         return Notify.failure(`Start value cannot be equal or greater than end value`);
     }
-    
+
     amount = Math.floor(amount);
 
     if (amount === 1) {
@@ -92,7 +92,6 @@ function numbersGeneration(from, to, amount) {
 
         sortGeneratedNumbers(generatedNumbers);
     }
-    
 
     numberWrapper.classList.remove('hidden');
 
@@ -100,10 +99,8 @@ function numbersGeneration(from, to, amount) {
     textBeforeNumberHandler();
 }
 
+// Sorting logic
 function sortGeneratedNumbers(array) {
-    // if (sortType.value === '1') {
-    // };
-
     if (sortType.value === '2') {
         array.sort((a, b) => a - b);
     };
@@ -113,6 +110,7 @@ function sortGeneratedNumbers(array) {
     }
 }
 
+// Result text logic
 function textBeforeNumberHandler() {
     if (generatedNumbers.length > 1) {
         return textBeforeNumber.textContent = 'Your numbers: ';
