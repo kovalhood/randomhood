@@ -3,6 +3,7 @@ const selects = document.getElementsByClassName('js-select');
 
 const sortingEl = document.querySelector("#sort-type");
 const fakeInputEl = document.querySelector('.js-fake-input');
+
 // All of that is created for centering text in select field on iOS Safari
 for (let i = 0; i < inputs.length; i++) {
     getSelected(i);
@@ -12,6 +13,7 @@ for (let i = 0; i < inputs.length; i++) {
     });
 }
 
+// Taking selected element
 function getSelected(i){
     inputs[i].value = selects[i].options[selects[i].selectedIndex].text;
 }
