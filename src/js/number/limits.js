@@ -1,3 +1,4 @@
+// Limits for form inputs
 const fromMin = 0;
 const fromMax = 9999;
 const toMin = 1;
