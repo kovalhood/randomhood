@@ -16,12 +16,14 @@ let generatedNumbers = [];
 randomizeButton.addEventListener('click', handleRandomize);
 resetButton.addEventListener('click', handleReset);
 
+// Function for getting random number
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Random number generation handler
 function handleRandomize() {
     numbersGeneration(inputFrom.value, inputTo.value, inputAmount.value);
     generatedNumbers = [];
@@ -48,12 +50,14 @@ function handleReset() {
     defaultAmountQuantityButtons();
 }
 
+// Numbers generation function
 function numbersGeneration(from, to, amount) {
     if (to - from <= 0) {
         handleReset();
         return Notify.failure(`Start value cannot be equal or greater than end value`);
     }
 
+    // Rounding up amount of numbers to generate
     amount = Math.floor(amount);
 
     if (amount === 1) {
