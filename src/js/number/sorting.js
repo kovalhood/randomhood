@@ -17,7 +17,7 @@ function getSelected(i){
     inputs[i].value = selects[i].options[selects[i].selectedIndex].text;
 }
 
-// Losing focus from Select after picking option
+// Losing focus from Select element after picking option
 sortingEl.addEventListener('change', handleSelectChange);
 
 function handleSelectChange() {
