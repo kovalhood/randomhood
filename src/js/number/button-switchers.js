@@ -60,7 +60,7 @@ function defaultToQuantityButtons() {
     toAddButtonOn();
 }
 
-// Amount quantity buttons
+// Amount buttons
 function amountRemoveButtonOff() {
     quantity.amountRemove.classList.remove('randomize__quantity');
     quantity.amountRemove.classList.add('randomize__quantity--disabled');
