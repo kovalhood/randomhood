@@ -16,11 +16,11 @@ const sectionPassword = document.querySelector('#section-password');
 
 const themeSelector = document.querySelector('meta[name="theme-color"]');
 
-// Click on Open/Close Handlers
+// Click on Open/Close handlers
 openMobileMenu.addEventListener('click', menuOpenHandler);
 closeMobileMenu.addEventListener('click', menuCloseHandler);
 
-// Links Handlers
+// Links handlers
 mobileNavNumber.addEventListener('click', handleMobileNavNumberClick);
 mobileNavYesNo.addEventListener('click', handleMobileYesNoClick);
 mobileNavDice.addEventListener('click', handleMobileDiceClick);
