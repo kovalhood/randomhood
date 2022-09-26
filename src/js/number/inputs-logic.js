@@ -21,7 +21,7 @@ inputFrom.addEventListener('keydown', handleInputKeydown);
 inputTo.addEventListener('keydown', handleInputKeydown);
 inputAmount.addEventListener('keydown', handleInputKeydown);
 
-// Avoiding "e", "E", "+", "-", "." in input fields
+// Avoiding symbols "e", "E", "+", "-", "." in input fields
 function handleInputKeydown(event) {
     ["e", "E", "+", "-", "."].includes(event.key) && event.preventDefault();
 }
