@@ -28,7 +28,7 @@ function handleAmountSwitch() {
         iconUp.classList.remove('hidden-icon');
         inputAmount.value = 2;
 
-        // Setting timeout for correct work on iOS
+        // Setting timeout for correct animation work on iOS
         setTimeout(() => {
             multipleWrapper.classList.remove('hidden-multiple');
         }, 100);
@@ -44,7 +44,7 @@ function handleAmountSwitch() {
         iconDown.classList.remove('hidden-icon');
         iconUp.classList.add('hidden-icon');
         
-        // Setting timeout for correct work on iOS
+        // Setting timeout for correct animation work on iOS
         setTimeout(() => {
             appearWrapper.classList.remove('appear-wrapper--show');
         }, 100);
