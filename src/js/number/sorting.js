@@ -4,7 +4,7 @@ const selects = document.getElementsByClassName('js-select');
 const sortingEl = document.querySelector("#sort-type");
 const fakeInputEl = document.querySelector('.js-fake-input');
 
-// All of that is created for centering text in select field on iOS Safari
+// All of that is created for centering text in selected field on iOS Safari
 for (let i = 0; i < inputs.length; i++) {
     getSelected(i);
     selects[i].addEventListener("change", function() {
@@ -17,7 +17,7 @@ function getSelected(i){
     inputs[i].value = selects[i].options[selects[i].selectedIndex].text;
 }
 
-// Losing focus from Select element after picking option
+// Losing focus from selected element after picking option
 sortingEl.addEventListener('change', handleSelectChange);
 
 function handleSelectChange() {
