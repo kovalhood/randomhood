@@ -114,7 +114,7 @@ function sortGeneratedNumbers(array) {
     }
 }
 
-// Result text logic
+// Text of result logic
 function textBeforeNumberHandler() {
     if (generatedNumbers.length > 1) {
         return textBeforeNumber.textContent = 'Your numbers: ';
