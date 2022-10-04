@@ -16,7 +16,7 @@ let generatedNumbers = [];
 randomizeButton.addEventListener('click', handleRandomize);
 resetButton.addEventListener('click', handleReset);
 
-// Function for getting random number
+// Function for generating random number
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
