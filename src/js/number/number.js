@@ -67,7 +67,7 @@ function numbersGeneration(from, to, amount) {
     if (amount > 1) {
         // Allow duplicates
         if (duplicatesCheckbox.checked) {
-            for (let i = 0; i < amount; i+=1) {
+            for (let i = 0; i < amount; i += 1) {
                 generatedNumbers.push(getRandomNumber(from, to));
             }
         }
@@ -79,7 +79,7 @@ function numbersGeneration(from, to, amount) {
                 return Notify.failure(`The amount of numbers cannot exceed the difference between the end and start values`);
             }
 
-            for (let i = 0; i < amount; i+=1) {
+            for (let i = 0; i < amount; i += 1) {
                 let includesNumber = true;
                 let randomNumber;
 
@@ -103,7 +103,7 @@ function numbersGeneration(from, to, amount) {
     textBeforeNumberHandler();
 }
 
-// Sorting logic
+// Sorting dropdown logic
 function sortGeneratedNumbers(array) {
     if (sortType.value === '2') {
         array.sort((a, b) => a - b);
@@ -119,6 +119,6 @@ function textBeforeNumberHandler() {
     if (generatedNumbers.length > 1) {
         return textBeforeNumber.textContent = 'Your numbers: ';
     }
-    
+
     textBeforeNumber.textContent = 'Your number: ';
 }
