@@ -50,7 +50,7 @@ function handleReset() {
     defaultAmountQuantityButtons();
 }
 
-// Numbers generation function
+// Numbers generation function with controllers
 function numbersGeneration(from, to, amount) {
     if (to - from <= 0) {
         handleReset();
@@ -72,7 +72,7 @@ function numbersGeneration(from, to, amount) {
             }
         }
 
-        // Disallow duplicates 
+        // Disallow duplicates
         else if (!duplicatesCheckbox.checked) {
             if (to - from + 1 - amount < 0) {
                 handleReset();
