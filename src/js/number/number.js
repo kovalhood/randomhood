@@ -85,7 +85,7 @@ function numbersGeneration(from, to, amount) {
 
                 while (includesNumber) {
                     // while operator stops execution when includesNumber = false, 
-                    // and then number pushes into array generatedNumbers
+                    // and then number pushes into our array generatedNumbers
                     randomNumber = getRandomNumber(from, to);
                     includesNumber = generatedNumbers.includes(randomNumber);
                 }
