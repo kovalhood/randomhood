@@ -1,12 +1,10 @@
 import { inputFrom, inputTo, inputAmount, sortType, duplicatesCheckbox, labelDuplicatesCheckbox, quantity } from './refs';
 import { multipleNumbers } from './amount-switcher';
 import { defaultFromQuantityButtons, defaultToQuantityButtons, defaultAmountQuantityButtons } from './button-switchers';
-
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const randomizeButton = document.querySelector('.randomize__button--generate');
 const resetButton = document.querySelector('.randomize__button--reset');
-
 const numberWrapper = document.querySelector('.randomize__number-wrapper');
 const textBeforeNumber = document.querySelector('.randomize__number-text');
 const randomNumberEl = document.querySelector('.randomize__number');
