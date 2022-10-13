@@ -11,7 +11,7 @@ const sectionDice = document.querySelector('#section-dice');
 const sectionCoin = document.querySelector('#section-coin');
 const sectionPassword = document.querySelector('#section-password');
 
-// Click on links in header
+// Click logic on links in header
 navLogo.addEventListener('click', handleNavLogoClick);
 navNumber.addEventListener('click', handleNavNumberClick);
 navYesNo.addEventListener('click', handleYesNoClick);
