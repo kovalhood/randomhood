@@ -4,20 +4,20 @@ const finalValue = document.getElementById('final-value');
 
 // Here is an object that stores values of minimum and maximum angle for a value
 const rotationValues = [
-    { minDegree: 0, maxDegree: 30, value: 'YES' },
-    { minDegree: 31, maxDegree: 90, value: 'NO' },
-    { minDegree: 91, maxDegree: 150, value: 'YES' },
-    { minDegree: 151, maxDegree: 210, value: 'NO' },
-    { minDegree: 211, maxDegree: 270, value: 'YES' },
-    { minDegree: 271, maxDegree: 330, value: 'NO' },
-    { minDegree: 331, maxDegree: 360, value: 'YES' },
+    { minDegree: 0, maxDegree: 30, value: 'NO' },
+    { minDegree: 31, maxDegree: 90, value: 'YES' },
+    { minDegree: 91, maxDegree: 150, value: 'NO' },
+    { minDegree: 151, maxDegree: 210, value: 'YES' },
+    { minDegree: 211, maxDegree: 270, value: 'NO' },
+    { minDegree: 271, maxDegree: 330, value: 'YES' },
+    { minDegree: 331, maxDegree: 360, value: 'NO' },
 ];
 
 // Size of each piece
 const data = [16, 16, 16, 16, 16, 16];
 
 // Background color for each piece
-var pieColors = ['#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6'];
+var pieColors = ['#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD'];
 
 // Create chart
 let myChart = new Chart(wheel, {
@@ -27,7 +27,7 @@ let myChart = new Chart(wheel, {
     type: 'pie',
     data: {
         // Labels (values which are to be displayed on chart)
-        labels: ['NO', 'YES', 'NO', 'YES', 'NO', 'YES'],
+        labels: ['YES', 'NO', 'YES', 'NO', 'YES', 'NO'],
         // Settings for dataset/pie
         datasets: [
             {
