@@ -100,7 +100,9 @@
 .yesno--arrow-left{
     position: absolute;
     top: 45%;
-    right: -4%;
+    right: -5%;
+    fill: $accent-color;
+    transform: rotate(-135deg);
 }
 
 #final-value{
