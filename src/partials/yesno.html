@@ -1,17 +1,11 @@
-<!-- <section id="section-yesno" class="section hidden">
-  <div class="container yesno">
-    <h2 class="section__title">Generate Yes or No</h2>
-    <p>Coming soon...</p>
-  </div>
-</section> -->
 <section id="section-yesno" class="section hidden">
   <div class="container yesno--container">
-    <div class="wrapper">
+    <div class="spinner-wrapper">
       <div class="spinner-container">
         <canvas id="wheel"></canvas>
         <button id="spin-button">Spin</button>
         <svg
-          class="yesno--arrow-left"
+          class="spinner__arrow-left"
           width="40"
           height="40"
           aria-label="arrow-left"
@@ -19,8 +13,12 @@
           <use href="./images/icons.svg#arrow-left"></use>
         </svg>
       </div>
-      <div id="final-value">
-        <p>Click On The Spin Button To Start</p>
+
+      <div class="result-field">
+        <h2 class="section__title">Generate Yes or No</h2>
+        <div id="final-value">
+          <p class="test">Click On The Spin Button To Start</p>
+        </div>
       </div>
     </div>
   </div>

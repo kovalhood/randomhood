@@ -64,7 +64,7 @@ const valueGenerator = (angleValue) => {
     for (let i of rotationValues) {
         //if the angleValue is between min and max then display it
         if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-            finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
+            finalValue.innerHTML = `<p class='yesno-result'>${i.value}</p>`;
             spinButton.disabled = false;
             break;
         }
@@ -80,7 +80,7 @@ let resultValue = 101;
 spinButton.addEventListener('click', () => {
     spinButton.disabled = true;
     // Empty final value
-    finalValue.innerHTML = `<p>Good Luck!</p>`;
+    finalValue.innerHTML = `<p class='test'>Good Luck!</p>`;
     // Generate random degrees to stop at
     let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
     // Interval for rotation animation

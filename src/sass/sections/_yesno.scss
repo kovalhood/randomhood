@@ -1,26 +1,16 @@
-// .yesno {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
-
-* {
-    margin: 0;
-    padding: 0;
-};
-
 .yesno--container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.wrapper{
+.spinner-wrapper{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    font-size: 12px;
 
     @media screen and (min-width: $tablet) {
         width: 90%;
@@ -30,15 +20,6 @@
     @media screen and (min-width: $desktop) {
         width: 80%;
     }
-    // max-width: 25.37em;
-    // max-height: 70vh;
-    // background-color: #e5d9f5;
-    // position: absolute;
-    // transform: translate(-50%, -50%);
-    // top: 50%;
-    // left: 50%;
-    // padding: 2em;
-    // box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
 };
 
 .spinner-container{
@@ -90,6 +71,7 @@
     box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
     transition: all .25s cubic-bezier(.4, 0, .2, 1);
     cursor: pointer;
+    z-index: 10;
 
     &:hover,
     &:focus {
@@ -97,12 +79,17 @@
     }
 }
 
-.yesno--arrow-left{
+.spinner__arrow-left{
     position: absolute;
     top: 45%;
     right: -5%;
     fill: $accent-color;
     transform: rotate(-135deg);
+}
+
+.result-field{
+    width: 240px;
+    // background-color: gold;
 }
 
 #final-value{
@@ -112,12 +99,19 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
-    .wrapper {
-        font-size: 12px;
-    }
+.test{
+    padding: 15px 0;
+}
 
-    .yesno--arrow-left {
-        right: -5%;
+.yesno-result {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: $accent-color;
+    text-shadow: $main-box-shadow;
+
+    &--multiple {
+        font-size: 28px;
     }
 }
