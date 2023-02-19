@@ -80,7 +80,7 @@ let resultValue = 101;
 spinButton.addEventListener('click', () => {
     spinButton.disabled = true;
     // Empty final value
-    finalValue.innerHTML = `<p class='test'>Good Luck!</p>`;
+    finalValue.innerHTML = `<p class='result-loading'>Good Luck!</p>`;
     // Generate random degrees to stop at
     let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
     // Interval for rotation animation
