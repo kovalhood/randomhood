@@ -59,8 +59,8 @@ let myChart = new Chart(wheel, {
 });
 
 // Results count
-let yesCount = Number(yesCountValue);
-let noCount = Number(noCountValue);
+let yesCount = Number(yesCountValueEl);
+let noCount = Number(noCountValueEl);
 
 // Display value based on the randomAngle
 const valueGenerator = (angleValue) => {
