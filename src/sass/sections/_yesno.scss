@@ -18,7 +18,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-        width: 80%;
+        width: 65%;
     }
 };
 
@@ -33,8 +33,8 @@
     }
 
     @media screen and (min-width: $desktop) {
-        width: 40%;
-        height: 40%;
+        width: 50%;
+        height: 50%;
     }
 }
 
@@ -98,11 +98,12 @@
 
 .result-field{
     display: block;
-    width: 240px;
+    width: 90%;
     margin-top: 30px;
     // background-color: gold;
 
     @media screen and (min-width: $tablet) {
+        width: 250px;
         margin-top: 0;
     }
 }
@@ -130,4 +131,55 @@
     &--multiple {
         font-size: 28px;
     }
+}
+
+.yesno-statistics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.yesno-statistics__count{
+    position: relative;
+    width: 190px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
+
+    @media screen and (min-width: $tablet) {
+        width: 115px;
+        margin-top: 0;
+    }
+}
+
+.yesno-statistics__description {
+    visibility: visible;
+    opacity: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 9px;
+    font-size: 11px;
+
+    &--yes{
+        color: #3eaa3e;
+    }
+
+    &--no {
+        color: #e28282;
+    }
+}
+
+.yesno-statistics__yes-count,
+.yesno-statistics__no-count{
+    font-size: 16px;
+    font-weight: 500;
 }

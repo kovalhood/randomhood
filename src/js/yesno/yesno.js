@@ -4,21 +4,19 @@ const finalValue = document.getElementById('final-value');
 
 // Here is an object that stores values of minimum and maximum angle for a value
 const rotationValues = [
-    { minDegree: 0, maxDegree: 30, value: 'yes' },
-    { minDegree: 31, maxDegree: 90, value: 'no' },
-    { minDegree: 91, maxDegree: 150, value: 'yes' },
-    { minDegree: 151, maxDegree: 210, value: 'no' },
-    { minDegree: 211, maxDegree: 270, value: 'yes' },
-    { minDegree: 271, maxDegree: 330, value: 'no' },
-    { minDegree: 331, maxDegree: 360, value: 'yes' },
+    { minDegree: 0, maxDegree: 30, value: 'YES' },
+    { minDegree: 31, maxDegree: 90, value: 'NO' },
+    { minDegree: 91, maxDegree: 150, value: 'YES' },
+    { minDegree: 151, maxDegree: 210, value: 'NO' },
+    { minDegree: 211, maxDegree: 270, value: 'YES' },
+    { minDegree: 271, maxDegree: 330, value: 'NO' },
+    { minDegree: 331, maxDegree: 360, value: 'YES' },
 ];
 
 // Size of each piece
 const data = [16, 16, 16, 16, 16, 16];
 
 // Background color for each piece
-// ad9bf1 yes
-// c8bbf6 no
 var pieColors = ['#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6'];
 
 // Create chart
@@ -29,7 +27,7 @@ let myChart = new Chart(wheel, {
     type: 'pie',
     data: {
         // Labels (values which are to be displayed on chart)
-        labels: ['no', 'yes', 'no', 'yes', 'no', 'yes'],
+        labels: ['NO', 'YES', 'NO', 'YES', 'NO', 'YES'],
         // Settings for dataset/pie
         datasets: [
             {
@@ -58,6 +56,9 @@ let myChart = new Chart(wheel, {
     },
 });
 
+// Results count
+let yesCount = Number(document.querySelector('.yesno-statistics__yes-count').textContent);
+let noCount = Number(document.querySelector('.yesno-statistics__no-count').textContent);
 
 // Display value based on the randomAngle
 const valueGenerator = (angleValue) => {
@@ -65,6 +66,19 @@ const valueGenerator = (angleValue) => {
         //if the angleValue is between min and max then display it
         if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
             finalValue.innerHTML = `<p class='yesno-result'>${i.value}</p>`;
+            finalResult = document.querySelector('.yesno-result').textContent;
+
+            // Updating statistics
+            if (finalResult === 'YES') {
+                yesCount += 1;
+                document.querySelector('.yesno-statistics__yes-count').textContent = yesCount;
+            }
+            else if (finalResult === 'NO') {
+                noCount += 1;
+                document.querySelector('.yesno-statistics__no-count').textContent = noCount;
+            }
+
+            // Enabling spin button
             spinButton.disabled = false;
             spinButton.classList.add('spin-button--enabled');
             spinButton.classList.remove('spin-button--disabled');  
@@ -86,17 +100,19 @@ spinButton.addEventListener('click', () => {
 
     // Empty final value
     finalValue.innerHTML = `<p class='result-loading'>Good Luck!</p>`;
+
     // Generate random degrees to stop at
     let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
+
     // Interval for rotation animation
     let rotationInterval = window.setInterval(() => {
         // Set rotation for piechart
-        /*
-        Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count. Eventually on last rotation we rotate by 1 degree at a time.
-        */
+        // Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count. Eventually on last rotation we rotate by 1 degree at a time.
         myChart.options.rotation = myChart.options.rotation + resultValue;
+        
         // Update chart with new value
         myChart.update();
+
         // If rotation > 360 reset it back to 0
         if (myChart.options.rotation >= 360) {
             count += 1;
