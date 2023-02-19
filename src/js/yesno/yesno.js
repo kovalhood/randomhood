@@ -66,7 +66,7 @@ const valueGenerator = (angleValue) => {
         //if the angleValue is between min and max then display it
         if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
             finalValue.innerHTML = `<p class='yesno-result'>${i.value}</p>`;
-            finalResult = document.querySelector('.yesno-result').textContent;
+            let finalResult = document.querySelector('.yesno-result').textContent;
 
             // Updating statistics
             if (finalResult === 'YES') {
