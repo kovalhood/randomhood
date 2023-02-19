@@ -35,3 +35,33 @@
     top: 0;
     padding: 0;
 }
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#spin-button{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 20%;
+    width: 20%;
+    background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+    color: #c66e16;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.yesno--arrow-left{
+    position: absolute;
+    top: 45%;
+    right: -4%;
+}
