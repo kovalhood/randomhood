@@ -65,3 +65,20 @@
     top: 45%;
     right: -4%;
 }
+
+#final-value{
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        font-size: 12px;
+    }
+
+    .yesno--arrow-left {
+        right: -5%;
+    }
+}
