@@ -66,6 +66,8 @@ const valueGenerator = (angleValue) => {
         if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
             finalValue.innerHTML = `<p class='yesno-result'>${i.value}</p>`;
             spinButton.disabled = false;
+            spinButton.classList.add('spin-button--enabled');
+            spinButton.classList.remove('spin-button--disabled');  
             break;
         }
     }
@@ -79,6 +81,9 @@ let resultValue = 101;
 // Start spinning
 spinButton.addEventListener('click', () => {
     spinButton.disabled = true;
+    spinButton.classList.remove('spin-button--enabled');
+    spinButton.classList.add('spin-button--disabled');
+
     // Empty final value
     finalValue.innerHTML = `<p class='result-loading'>Good Luck!</p>`;
     // Generate random degrees to stop at
