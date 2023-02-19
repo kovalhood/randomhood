@@ -17,8 +17,9 @@ const rotationValues = [
 const data = [16, 16, 16, 16, 16, 16];
 
 // Background color for each piece
-
-var pieColors = ['#8b35bc', '#b163da', '#8b35bc', '#b163da', '#8b35bc', '#b163da'];
+// ad9bf1 yes
+// c8bbf6 no
+var pieColors = ['#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6'];
 
 // Create chart
 let myChart = new Chart(wheel, {
@@ -49,7 +50,7 @@ let myChart = new Chart(wheel, {
             },
             //display labels inside pie chart
             datalabels: {
-                color: "#ffffff",
+                color: "#6b48f2",
                 formatter: (_, context) => context.chart.data.labels[context.dataIndex],
                 font: { size: 16 },
             },
