@@ -1,8 +1,6 @@
 const wheel = document.getElementById('wheel');
 const spinButton = document.getElementById('spin-button');
 const finalValue = document.getElementById('final-value');
-const yesCountValueEl = document.querySelector('.yesno-statistics__yes-count').textContent;
-const noCountValueEl = document.querySelector('.yesno-statistics__no-count').textContent;
 
 // Here is an object that stores values of minimum and maximum angle for a value
 const rotationValues = [
@@ -59,8 +57,8 @@ let myChart = new Chart(wheel, {
 });
 
 // Results count
-let yesCount = Number(yesCountValueEl);
-let noCount = Number(noCountValueEl);
+let yesCount = Number(document.querySelector('.yesno-statistics__yes-count').textContent);
+let noCount = Number(document.querySelector('.yesno-statistics__no-count').textContent);
 
 // Display value based on the randomAngle
 const valueGenerator = (angleValue) => {
@@ -73,11 +71,11 @@ const valueGenerator = (angleValue) => {
             // Updating statistics
             if (finalResult === 'YES') {
                 yesCount += 1;
-                yesCountValueEl = yesCount;
+                document.querySelector('.yesno-statistics__yes-count').textContent = yesCount;
             }
             else if (finalResult === 'NO') {
                 noCount += 1;
-                noCountValueEl = noCount;
+                document.querySelector('.yesno-statistics__no-count').textContent = noCount;
             }
 
             // Enabling spin button
