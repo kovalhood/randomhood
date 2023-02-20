@@ -18,7 +18,8 @@ const data = [16, 16, 16, 16, 16, 16];
 
 // Background color for each piece
 var pieColors = ['#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD'];
-
+var pieColorsHover = ['#b09ff2', '#ccc1f2', '#b09ff2', '#ccc1f2', '#b09ff2', '#ccc1f2']
+    
 // Create chart
 let myChart = new Chart(wheel, {
     // Plugin for displaying text on pie chart
@@ -32,6 +33,7 @@ let myChart = new Chart(wheel, {
         datasets: [
             {
                 backgroundColor: pieColors,
+                hoverBackgroundColor: pieColorsHover,
                 data: data,
             }
         ],
@@ -73,6 +75,7 @@ const valueGenerator = (angleValue) => {
                 yesCount += 1;
                 document.querySelector('.yesno-statistics__yes-count').textContent = yesCount;
             }
+
             else if (finalResult === 'NO') {
                 noCount += 1;
                 document.querySelector('.yesno-statistics__no-count').textContent = noCount;
@@ -89,6 +92,7 @@ const valueGenerator = (angleValue) => {
 
 // Spinner count
 let count = 0;
+
 // 100 rotations for animation and last rotation for result
 let resultValue = 101;
 
@@ -119,6 +123,7 @@ spinButton.addEventListener('click', () => {
             resultValue -= 5;
             myChart.options.rotation = 0;
         }
+
         else if (count > 15 && myChart.options.rotation == randomDegree) {
             valueGenerator(randomDegree);
             clearInterval(rotationInterval);
