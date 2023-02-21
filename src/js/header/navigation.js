@@ -77,6 +77,7 @@ function handleDiceClick() {
 
     // handler for dice z-index fix
     document.querySelector('.dice-wrapper').style.opacity = '100';
+    document.querySelector('.dice-wrapper').style.visibility = 'visible';
 }
 
 function handleCoinClick() {
