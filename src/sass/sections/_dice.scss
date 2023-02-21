@@ -8,16 +8,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -50px;
-    margin-left: -50px;
+    margin-top: -60px;
+    margin-left: -60px;
     padding: 30px 0;
     transition: all .25s cubic-bezier(.4, 0, .2, 1);
 }
 
 .dice {
     position: relative;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 60px;
+    margin-left: 60px;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
@@ -59,17 +59,17 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: black;
+    background: #3A3A3A;
 }
 
 .front{
     transform: translateZ(50px);
 
     &::after{
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         background: $accent-color;
-        margin: -15px 0 0 -15px;
+        margin: -10px 0 0 -10px;
     }
 }
 

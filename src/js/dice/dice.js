@@ -138,7 +138,6 @@ const randomDice = () => {
             return;
         }
         else if (diceQuantityInput.value === '6') {
-            console.log(randomNumber1, randomNumber2, randomNumber3, randomNumber4, randomNumber5, randomNumber6)
             rollDice(randomNumber1, document.querySelector('.dice-1'));
             rollDice(randomNumber2, document.querySelector('.dice-2'));
             rollDice(randomNumber3, document.querySelector('.dice-3'));
