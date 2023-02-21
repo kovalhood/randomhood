@@ -19,6 +19,43 @@
         <div class="face left"></div>
       </div>
     </div>
-    <button class="roll-button roll-button--enabled">Roll</button>
+    <div class="dice-controlls">
+      <button class="roll-button roll-button--enabled">Roll</button>
+
+      <div class="dice__input-wrapper">
+        <button
+          type="button"
+          id="dice-remove"
+          class="dice__quantity"
+          onclick="this.blur();"
+        >
+          <svg
+            class="dice__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="minus"
+          >
+            <use href="./images/icons.svg#minus"></use>
+          </svg>
+        </button>
+        <input id="dice-amount" type="number" name="dice-amount" value="2" />
+        <label class="dice__input-label" for="dice-amount">Amount</label>
+        <button
+          type="button"
+          id="dice-add"
+          class="dice__quantity"
+          onclick="this.blur();"
+        >
+          <svg
+            class="dice__quantity--icon"
+            width="20"
+            height="20"
+            aria-label="plus"
+          >
+            <use href="./images/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
