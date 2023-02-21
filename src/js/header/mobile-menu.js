@@ -33,7 +33,7 @@ function menuOpenHandler() {
     document.body.style.overflow = 'hidden';
 
     // handler for dice z-index fix
-    document.querySelector('.dice-wrapper').style.opacity = '0';
+    // document.querySelector('.dice-wrapper').style.opacity = '0';
 }
 
 function menuCloseHandler() {
@@ -42,9 +42,9 @@ function menuCloseHandler() {
     document.body.style.overflow = 'visible';
 
     // handler for dice z-index fix
-    setTimeout(() => {
-        document.querySelector('.dice-wrapper').style.opacity = '100';
-    }, 90);
+    // setTimeout(() => {
+    //     document.querySelector('.dice-wrapper').style.opacity = '100';
+    // }, 90);
 }
 
 function handleMobileNavNumberClick() {
@@ -98,9 +98,9 @@ function handleMobileDiceClick() {
     themeSelector.setAttribute("content", "#ffffff");
 
     // handler for dice z-index fix
-    setTimeout(() => {
-        document.querySelector('.dice-wrapper').style.opacity = '100';
-    }, 90);
+    // setTimeout(() => {
+    //     document.querySelector('.dice-wrapper').style.opacity = '100';
+    // }, 90);
 }
 
 function handleMobileCoinClick() {
