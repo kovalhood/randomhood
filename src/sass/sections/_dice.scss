@@ -22,15 +22,9 @@
     animation: rolling 10s;
 }
 
-@-webkit-keyframes rolling {
-    50% {
-        transform: rotateX(455deg), rotateY(455deg);
-    }
-}
-
 @keyframes rolling {
     50% {
-        transform: rotateX(455deg), rotateY(455deg);
+        transform: rotateX(455deg) rotateY(455deg);
     }
 }
 
