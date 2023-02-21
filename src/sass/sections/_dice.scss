@@ -133,14 +133,23 @@
     border: none;
     border-radius: 8px;
     font-weight: 500;
-    color: #fff; 
-    background-color: $accent-color;
     box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
     transition: all .25s cubic-bezier(.4, 0, .2, 1);
     cursor: pointer;
 
-    &:hover,
-    &:focus{
+    &--enabled {
+        color: #fff;
+        background-color: $accent-color;
+    }
+
+    &--enabled:hover,
+    &--enabled:focus{
         background-color: $button-hover;
+    }
+
+    &--disabled{
+        color: $button-disabled;
+        background-color: $button-disabled-text;
+        cursor: auto;
     }
 }

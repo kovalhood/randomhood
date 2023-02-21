@@ -14,6 +14,9 @@ const randomDice = () => {
 
 const rollDice = random => {
     dice.style.animation = 'rolling 4s';
+    rollButton.disabled = true;
+    rollButton.classList.remove('roll-button--enabled');
+    rollButton.classList.add('roll-button--disabled');
 
     setTimeout(() => {
         switch (random) {
@@ -51,7 +54,11 @@ const rollDice = random => {
                 break;
         }
         dice.style.animation = 'none';
+        rollButton.disabled = false;
+        rollButton.classList.add('roll-button--enabled');
+        rollButton.classList.remove('roll-button--disabled');
     }, 4050);
+    
 };
 
 rollButton.addEventListener('click', randomDice);
