@@ -64,6 +64,7 @@ function handleMobileNavNumberClick() {
 
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+    document.body.style.overflow = 'visible';
 }
 
 function handleMobileYesNoClick() {
@@ -81,6 +82,7 @@ function handleMobileYesNoClick() {
 
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+    document.body.style.overflow = 'visible';
 }
 
 function handleMobileDiceClick() {
@@ -98,6 +100,7 @@ function handleMobileDiceClick() {
 
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+    document.body.style.overflow = 'visible';
 
     // handler for dice z-index fix
     setTimeout(() => {
@@ -121,6 +124,7 @@ function handleMobileCoinClick() {
 
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+    document.body.style.overflow = 'visible';
 }
 
 function handleMobilePasswordClick() {
@@ -138,4 +142,5 @@ function handleMobilePasswordClick() {
 
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+    document.body.style.overflow = 'visible';
 }
