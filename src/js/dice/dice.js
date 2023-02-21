@@ -46,14 +46,18 @@ function handleQuantityAddClick() {
 }
 
 function handleDiceQuantityChange() {
+    createOrRemoveDice();
+
     if (diceQuantityInput.value <= diceAmountMin) {
         diceQuantityInput.value = diceAmountMin;
+        createOrRemoveDice();
         diceRemoveButtonOff();
         diceAddButtonOn();
     }
 
     if (diceQuantityInput.value >= diceAmountMax) {
         diceQuantityInput.value = diceAmountMax;
+        createOrRemoveDice();
         diceRemoveButtonOn();
         diceAddButtonOff();
     }
@@ -159,6 +163,11 @@ const rollDice = (random, dice) => {
     rollButton.classList.remove('roll-button--enabled');
     rollButton.classList.add('roll-button--disabled');
 
+    diceRemoveButtonOff();
+    diceAddButtonOff();
+    diceQuantityInput.disabled = true;
+    document.querySelector('.dice__input-label').classList.add('dice__input-label--hidden');
+
     setTimeout(() => {
         if (random === 1) {
             console.log('1');
@@ -194,6 +203,11 @@ const rollDice = (random, dice) => {
         rollButton.disabled = false;
         rollButton.classList.add('roll-button--enabled');
         rollButton.classList.remove('roll-button--disabled');
+
+        diceRemoveButtonOn();
+        diceAddButtonOn();
+        diceQuantityInput.disabled = false;
+        document.querySelector('.dice__input-label').classList.remove('dice__input-label--hidden');
     }, 4050);
 };
 
