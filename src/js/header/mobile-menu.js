@@ -31,12 +31,18 @@ function menuOpenHandler() {
     mobileMenuEl.classList.add('is-open');
     themeSelector.setAttribute("content", "#6b48f2");
     document.body.style.overflow = 'hidden';
+
+    // handler for dice z-index fix
+    document.querySelector('.dice-wrapper').style.opacity = '0';
 }
 
 function menuCloseHandler() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    // handler for dice z-index fix
+    document.querySelector('.dice-wrapper').style.opacity = '100';
 }
 
 function handleMobileNavNumberClick() {
@@ -88,6 +94,9 @@ function handleMobileDiceClick() {
 
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
+
+    // handler for dice z-index fix
+    document.querySelector('.dice-wrapper').style.opacity = '100';
 }
 
 function handleMobileCoinClick() {

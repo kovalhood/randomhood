@@ -74,6 +74,9 @@ function handleDiceClick() {
     sectionDice.classList.remove('hidden');
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
+
+    // handler for dice z-index fix
+    document.querySelector('.dice-wrapper').style.opacity = '100';
 }
 
 function handleCoinClick() {
