@@ -44,7 +44,7 @@ function menuCloseHandler() {
     // handler for dice z-index fix
     setTimeout(() => {
         document.querySelector('.dice-wrapper').style.opacity = '100';
-    }, 100);
+    }, 90);
 }
 
 function handleMobileNavNumberClick() {
@@ -100,7 +100,7 @@ function handleMobileDiceClick() {
     // handler for dice z-index fix
     setTimeout(() => {
         document.querySelector('.dice-wrapper').style.opacity = '100';
-    }, 100);
+    }, 90);
 }
 
 function handleMobileCoinClick() {
