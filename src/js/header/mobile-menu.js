@@ -42,7 +42,9 @@ function menuCloseHandler() {
     document.body.style.overflow = 'visible';
 
     // handler for dice z-index fix
-    document.querySelector('.dice-wrapper').style.opacity = '100';
+    setTimeout(() => {
+        document.querySelector('.dice-wrapper').style.opacity = '100';
+    }, 100);
 }
 
 function handleMobileNavNumberClick() {
@@ -96,7 +98,9 @@ function handleMobileDiceClick() {
     themeSelector.setAttribute("content", "#ffffff");
 
     // handler for dice z-index fix
-    document.querySelector('.dice-wrapper').style.opacity = '100';
+    setTimeout(() => {
+        document.querySelector('.dice-wrapper').style.opacity = '100';
+    }, 100);
 }
 
 function handleMobileCoinClick() {
