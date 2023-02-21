@@ -94,11 +94,13 @@
 // 
     &::after {
         background: blue;
-        margin: -36px 0 0 -36px;
-        -webkit-box-shadow: 26px 26px,
-            52px 52px,
-            52px 0,
-            0 52px;
+        // margin: -36px 0 0 -36px;
+        // -webkit-box-shadow: 26px 26px,
+        //     52px 52px,
+        //     52px 0,
+        //     0 52px;
+        margin: -30px 0 0 -30px;
+            -webkit-box-shadow: 40px 40px;
     }
 }
 
@@ -119,9 +121,11 @@
 // 
     &::after {
         background: purple;
-        margin: -35px 0 0 -35px;
-        -webkit-box-shadow: 25px 25px,
-            50px 50px;
+        // margin: -35px 0 0 -35px;
+        // -webkit-box-shadow: 25px 25px,
+        //     50px 50px;
+        margin: -30px 0 0 -30px;
+            -webkit-box-shadow: 40px 40px;
     }
 }
 
