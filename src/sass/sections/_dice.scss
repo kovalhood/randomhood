@@ -69,9 +69,8 @@
     transform: rotateX(180deg) translateZ(50px);
     
     &::after{
-        background: red;
         margin: -35px 0 0 -30px;
-        -webkit-box-shadow: 40px 0,
+        box-shadow: 40px 0,
             0 25px,
             40px 25px,
             0 50px,
@@ -83,9 +82,8 @@
     transform: rotateX(90deg) translateZ(50px);
 
     &::after{
-        background: green;
         margin: -30px 0 0 -30px;
-        -webkit-box-shadow: 40px 40px;
+        box-shadow: 40px 40px;
     }
 }
 
@@ -93,15 +91,12 @@
     transform: rotateX(-90deg) translateZ(50px);
 // 
     &::after {
-        background:pink ;
-        // margin: -36px 0 0 -36px;
-        // -webkit-box-shadow: 26px 26px,
-        //     52px 52px,
-        //     52px 0,
-        //     0 52px;
-        margin: -30px 0 0 -30px;
-            -webkit-box-shadow: 40px 40px;
-            transform: translateZ(1px)
+        margin: -36px 0 0 -36px;
+        box-shadow: 26px 26px,
+            52px 52px,
+            52px 0,
+            0 52px;
+        transform: translateZ(1px)
     }
 }
 
@@ -109,9 +104,8 @@
     transform: rotateY(90deg) translateZ(50px);
 
     &::after {
-        background: orange;
         margin: -30px 0 0 -30px;
-        -webkit-box-shadow: 40px 0,
+        box-shadow: 40px 0,
             0 40px,
             40px 40px;
     }
@@ -119,15 +113,12 @@
 
 .left {
     transform: rotateY(-90deg) translateZ(50px);
-// 
+
     &::after {
-        background: purple;
-        // margin: -35px 0 0 -35px;
-        // -webkit-box-shadow: 25px 25px,
-        //     50px 50px;
-        margin: -30px 0 0 -30px;
-            -webkit-box-shadow: 40px 40px;
-            transform: translateZ(1px)
+        margin: -35px 0 0 -35px;
+        box-shadow: 25px 25px,
+            50px 50px;
+        transform: translateZ(1px)
     }
 }
 
