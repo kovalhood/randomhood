@@ -7,3 +7,4 @@ import './js/number/sorting';
 import './js/number/amount-switcher';
 import './js/number/duplicates-checkbox';
 import './js/yesno/yesno';
+import './js/dice/dice';
