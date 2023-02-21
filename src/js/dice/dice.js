@@ -1,5 +1,5 @@
-const dice1 = document.querySelector('.dice-1');
-const dice2 = document.querySelector('.dice-2');
+import { createOrRemoveDice } from './dice-create-or-remove';
+
 const rollButton = document.querySelector('.roll-button');
 
 const diceAmountMin = 1;
@@ -21,6 +21,7 @@ function handleInputKeydown(event) {
 
 function handleQuantityRemoveClick() {
     diceQuantityInput.value = Number(diceQuantityInput.value) - 1;
+    createOrRemoveDice();
 
     if (diceQuantityInput.value == diceAmountMin) {
         diceRemoveButtonOff();
@@ -33,6 +34,7 @@ function handleQuantityRemoveClick() {
 
 function handleQuantityAddClick() {
     diceQuantityInput.value = Number(diceQuantityInput.value) + 1;
+    createOrRemoveDice();
 
     if (diceQuantityInput.value >= diceAmountMin + 1) {
         diceRemoveButtonOn();
@@ -96,13 +98,57 @@ function diceAddButtonOn() {
 
 
 const randomDice = () => {
-    const randomNumber = Math.floor(Math.random() * 10);
-    const randomNumber1 = Math.floor(Math.random() * 10);
+    // Here we need to take into account that our dice can give as a number from 1 to 6
+    const randomNumber2 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    const randomNumber1 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    const randomNumber3 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    const randomNumber4 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    const randomNumber5 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    const randomNumber6 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
 
-    if (randomNumber >= 1 && randomNumber <= 6) {
-        rollDice(randomNumber, dice1);
-        rollDice(randomNumber1, dice2);
+    if (randomNumber1 >= 1 && randomNumber1 <= 6) {
+        if (diceQuantityInput.value === '1') {
+            rollDice(randomNumber1, document.querySelector('.dice-1'));
+            return;
+        }
+        else if (diceQuantityInput.value === '2') {
+            rollDice(randomNumber1, document.querySelector('.dice-1'));
+            rollDice(randomNumber2, document.querySelector('.dice-2'));
+            return;
+        }
+        else if (diceQuantityInput.value === '3') {
+            rollDice(randomNumber1, document.querySelector('.dice-1'));
+            rollDice(randomNumber2, document.querySelector('.dice-2'));
+            rollDice(randomNumber3, document.querySelector('.dice-3'));
+            return;
+        }
+        else if (diceQuantityInput.value === '4') {
+            rollDice(randomNumber1, document.querySelector('.dice-1'));
+            rollDice(randomNumber2, document.querySelector('.dice-2'));
+            rollDice(randomNumber3, document.querySelector('.dice-3'));
+            rollDice(randomNumber4, document.querySelector('.dice-4'));
+            return;
+        }
+        else if (diceQuantityInput.value === '5') {
+            rollDice(randomNumber1, document.querySelector('.dice-1'));
+            rollDice(randomNumber2, document.querySelector('.dice-2'));
+            rollDice(randomNumber3, document.querySelector('.dice-3'));
+            rollDice(randomNumber4, document.querySelector('.dice-4'));
+            rollDice(randomNumber5, document.querySelector('.dice-5'));
+            return;
+        }
+        else if (diceQuantityInput.value === '6') {
+            console.log(randomNumber1, randomNumber2, randomNumber3, randomNumber4, randomNumber5, randomNumber6)
+            rollDice(randomNumber1, document.querySelector('.dice-1'));
+            rollDice(randomNumber2, document.querySelector('.dice-2'));
+            rollDice(randomNumber3, document.querySelector('.dice-3'));
+            rollDice(randomNumber4, document.querySelector('.dice-4'));
+            rollDice(randomNumber5, document.querySelector('.dice-5'));
+            rollDice(randomNumber6, document.querySelector('.dice-6'));
+            return;
+        }
     }
+    
     else {
         randomDice();
     }
