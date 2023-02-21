@@ -93,7 +93,7 @@
     transform: rotateX(-90deg) translateZ(50px);
 // 
     &::after {
-        background: blue;
+        background:pink ;
         // margin: -36px 0 0 -36px;
         // -webkit-box-shadow: 26px 26px,
         //     52px 52px,
@@ -101,6 +101,7 @@
         //     0 52px;
         margin: -30px 0 0 -30px;
             -webkit-box-shadow: 40px 40px;
+            transform: translateZ(1px)
     }
 }
 
@@ -126,6 +127,7 @@
         //     50px 50px;
         margin: -30px 0 0 -30px;
             -webkit-box-shadow: 40px 40px;
+            transform: translateZ(1px)
     }
 }
 
