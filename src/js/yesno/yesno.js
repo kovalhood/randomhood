@@ -101,7 +101,9 @@ let count = 0;
 let resultValue = 101;
 
 // Start spinning
-spinButton.addEventListener('click', () => {
+spinButton.addEventListener('click', handleYesNoSpin);
+
+function handleYesNoSpin() {
     spinButton.disabled = true;
     spinButton.classList.remove('spin-button--enabled');
     spinButton.classList.add('spin-button--disabled');
@@ -135,4 +137,4 @@ spinButton.addEventListener('click', () => {
             resultValue = 101;
         }
     }, 10);
-});
+};
