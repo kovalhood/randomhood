@@ -11,6 +11,7 @@ diceQuantityAdd.addEventListener('click', handleQuantityAddClick);
 diceQuantityInput.addEventListener('change', handleDiceQuantityChange);
 
 diceQuantityInput.addEventListener('keydown', handleInputKeydown);
+
 function handleInputKeydown(event) {
     ["e", "E", "+", "-", "."].includes(event.key) && event.preventDefault();
 }
