@@ -18,7 +18,10 @@ const data = [16, 16, 16, 16, 16, 16];
 
 // Background color for each piece
 var pieColors = ['#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD'];
-var pieColorsHover = ['#b09ff2', '#ccc1f2', '#b09ff2', '#ccc1f2', '#b09ff2', '#ccc1f2']
+var pieColorsHover = ['#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD', '#c8bbf6', '#EEEAFD'];
+
+// Colors for hover on pie
+// var pieColorsHover = ['#b09ff2', '#ccc1f2', '#b09ff2', '#ccc1f2', '#b09ff2', '#ccc1f2']
     
 // Create chart
 let myChart = new Chart(wheel, {
@@ -34,6 +37,7 @@ let myChart = new Chart(wheel, {
             {
                 backgroundColor: pieColors,
                 hoverBackgroundColor: pieColorsHover,
+                hoverBorderColor : "#ffffff",
                 data: data,
             }
         ],
@@ -52,7 +56,7 @@ let myChart = new Chart(wheel, {
             datalabels: {
                 color: "#6b48f2",
                 formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-                font: { size: 16 },
+                font: { size: 16, weight: 500, family: 'Open Sans' },
             },
         },
     },

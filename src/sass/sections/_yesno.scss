@@ -78,6 +78,8 @@
 
     &--enabled:hover,
     &--enabled:focus {
+        height: 21%;
+        width: 21%;
         background-color: $button-hover;
     }
 
