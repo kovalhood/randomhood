@@ -203,9 +203,15 @@ const rollDice = (random, dice) => {
         rollButton.disabled = false;
         rollButton.classList.add('roll-button--enabled');
         rollButton.classList.remove('roll-button--disabled');
+        
+        if (Number(diceQuantityInput.value) != '6') {
+            diceAddButtonOn();
+        }
 
-        diceRemoveButtonOn();
-        diceAddButtonOn();
+        if (Number(diceQuantityInput.value) != '1') {
+            diceRemoveButtonOn();
+        }
+
         diceQuantityInput.disabled = false;
         document.querySelector('.dice__input-label').classList.remove('dice__input-label--hidden');
     }, 4050);
