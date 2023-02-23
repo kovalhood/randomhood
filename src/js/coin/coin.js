@@ -25,6 +25,10 @@ function handleCoinFlip() {
         tailsCount += 1;
     }
 
+    setTimeout(function () {
+        coinResetButton.classList.remove('coin-reset-button--hidden');
+    }, 3000);
+    
     setTimeout(updateStats, 3000);
     disableButtons();
 }
@@ -56,6 +60,7 @@ function disableButtons(){
 };
 
 function handleCoinReset() {
+    coinResetButton.classList.add('coin-reset-button--hidden');
     headsCount = 0;
     tailsCount = 0;
     updateStats();
