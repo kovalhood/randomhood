@@ -10,7 +10,6 @@
     width: 150px;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    // animation: spin-tails 3s forwards;
 }
 
 .heads,
@@ -58,10 +57,7 @@
     }
 }
 
-
-
-
-.coin-button {
+.coin-flip-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,21 +91,37 @@
 }
 
 .coin-reset-button{
-    color: $accent-color;
-    background-color: $white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 60px;
     margin-top: 25px;
-    opacity: 1;
-    visibility: visible;
-    z-index: 0;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
     transition: all .25s cubic-bezier(.4, 0, .2, 1);
+    z-index: 0;
+    cursor: pointer;
 
-    &:hover,
-    &:focus{
+    &--enabled {
+        color: $accent-color;
+        background-color: $white-color;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &--enabled:hover,
+    &--enabled:focus {
         background-color: $button-disabled-text;
     }
 
     &--disabled {
         color: $button-disabled;
+        // background-color: $button-disabled-text;
+        cursor: auto;
     }
 
     &--hidden{

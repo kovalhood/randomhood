@@ -9,3 +9,4 @@ import './js/number/duplicates-checkbox';
 import './js/yesno/yesno';
 import './js/dice/dice';
 import './js/dice/dice-amount-logic';
+import './js/coin/coin';
