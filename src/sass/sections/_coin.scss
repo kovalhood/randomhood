@@ -4,8 +4,24 @@
     align-items: center;
 }
 
+.coin-positioning{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 10px;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 55%;
+    }
+}
+
 .coin-wrapper{
-    margin: 2px 0 3px 0;
     padding: 20px 0;
 
     @media screen and (min-width: $tablet) {
