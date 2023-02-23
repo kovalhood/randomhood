@@ -24,7 +24,39 @@ function handleCoinFlip() {
         tailsCount += 1;
     }
 
-    // setTimeout(function () {
-    //         coinEl.style.animation = 'none';
-    //     }, 3050);
+    setTimeout(updateStats, 3000);
+    disableButtons();
 }
+
+function updateStats() {
+    coinEl.style.animation = 'none';
+    document.querySelector(".coin-statistics__heads-count").textContent = `${headsCount}`;
+    document.querySelector(".coin-statistics__tails-count").textContent = `${tailsCount}`;
+}
+
+function disableButtons(){
+    coinFlipButton.disabled = true;
+    coinFlipButton.classList.remove('coin-flip-button--enabled');
+    coinFlipButton.classList.add('coin-flip-button--disabled');
+
+    coinResetButton.disabled = true;
+    coinResetButton.classList.remove('coin-reset-button--enabled');
+    coinResetButton.classList.add('coin-reset-button--disabled');
+
+    setTimeout(function(){
+        coinFlipButton.disabled = false;
+        coinFlipButton.classList.add('coin-flip-button--enabled');
+        coinFlipButton.classList.remove('coin-flip-button--disabled');
+
+        coinResetButton.disabled = false;
+        coinResetButton.classList.add('coin-reset-button--enabled');
+        coinResetButton.classList.remove('coin-reset-button--disabled');
+    },3000);
+}
+
+// resetBtn.addEventListener("click",() => {
+//     coin.style.animation = "none";
+//     heads = 0;
+//     tails = 0;
+//     updateStats();
+// });
