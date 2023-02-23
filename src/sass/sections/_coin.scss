@@ -6,6 +6,11 @@
 
 .coin-wrapper{
     margin: 2px 0 3px 0;
+    padding: 20px 0;
+
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+    }
 }
 
 .coin {
