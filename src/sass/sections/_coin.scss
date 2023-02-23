@@ -175,16 +175,8 @@
 
     &--heads,
     &--tails {
-        color: $text-black-secondary;
+        color: $accent-color;
     }
-
-    // &--heads {
-    //     color: #3eaa3e;
-    // }
-
-    // &--tails {
-    //     color: #e28282;
-    // }
 }
 
 .coin-statistics__heads-count,
