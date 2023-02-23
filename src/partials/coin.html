@@ -1,8 +1,22 @@
 <section id="section-coin" class="section hidden">
-  <div class="container coin">
+  <div class="container coin--container">
     <h2 class="section__title">Flip a coin</h2>
 
+    <div class="coin">
+      <div class="heads">
+        <p>heads</p>
+        <!-- <img src="./images/heads.svg"> -->
+      </div>
+      <div class="tails">
+        <p>tails</p>
+        <!-- <img src="./images/tails.svg"> -->
+      </div>
+    </div>
 
+
+
+    <button class="coin-button coin-button--enabled" onclick="this.blur();">Flip</button>
+    <button class="coin-button coin-reset-button" onclick="this.blur();">Reset</button>
 
     <div class="coin-statistics">
           <div class="coin-statistics__count">

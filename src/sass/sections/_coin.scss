@@ -1,14 +1,123 @@
-.coin {
+.coin--container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.coin {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    // animation: spin-tails 3s forwards;
+}
+
+.heads,
+.tails{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $accent-color;
+    background: linear-gradient(145deg, $button-secondary-color, $white-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid $accent-color;
+    box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.tails {
+    transform: rotateX(180deg);
+}
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(2160deg);
+    }
+}
 
 
 
 
+.coin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 60px;
+    margin-top: 25px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
+    cursor: pointer;
+    z-index: 1;
 
+    &--enabled {
+        color: #fff;
+        background-color: $accent-color;
+    }
+
+    &--enabled:hover,
+    &--enabled:focus {
+        background-color: $button-hover;
+    }
+
+    &--disabled {
+        color: $button-disabled;
+        background-color: $button-disabled-text;
+        cursor: auto;
+    }
+}
+
+.coin-reset-button{
+    color: $accent-color;
+    background-color: $white-color;
+    margin-top: 25px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 0;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
+
+    &:hover,
+    &:focus{
+        background-color: $button-disabled-text;
+    }
+
+    &--disabled {
+        color: $button-disabled;
+    }
+
+    &--hidden{
+        margin-top: -60px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 
 .coin-statistics {
     display: flex;
@@ -23,7 +132,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 190px;
+    width: 125px;
     height: 70px;
     margin-left: 20px;
     padding: 10px 30px;
@@ -32,7 +141,6 @@
     box-shadow: 0 1px 3px #6b48f21f, 0 1px 2px #6b48f23d;
 
     @media screen and (min-width: $tablet) {
-        width: 115px;
         margin-top: 0;
     }
 }
