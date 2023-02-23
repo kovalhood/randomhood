@@ -5,6 +5,7 @@ const coinFlipButton = document.querySelector('.coin-flip-button');
 const coinResetButton = document.querySelector('.coin-reset-button');
 
 coinFlipButton.addEventListener('click', handleCoinFlip);
+coinResetButton.addEventListener("click", handleCoinReset);
 
 function handleCoinFlip() {
     let randomCoin = Math.floor(Math.random() * 2);
@@ -52,11 +53,11 @@ function disableButtons(){
         coinResetButton.classList.add('coin-reset-button--enabled');
         coinResetButton.classList.remove('coin-reset-button--disabled');
     },3000);
-}
+};
 
-// resetBtn.addEventListener("click",() => {
-//     coin.style.animation = "none";
-//     heads = 0;
-//     tails = 0;
-//     updateStats();
-// });
+function handleCoinReset() {
+    headsCount = 0;
+    tailsCount = 0;
+    updateStats();
+};
+
