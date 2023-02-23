@@ -92,6 +92,9 @@ function handleCoinClick() {
     sectionDice.classList.add('hidden');
     sectionCoin.classList.remove('hidden');
     sectionPassword.classList.add('hidden');
+
+    // handler for coin animation
+    document.querySelector('.coin').style.animation = 'none';
 }
 
 function handlePasswordClick() {

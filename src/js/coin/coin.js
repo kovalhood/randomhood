@@ -34,7 +34,7 @@ function handleCoinFlip() {
 }
 
 function updateStats() {
-    coinEl.style.animation = 'none';
+    // coinEl.style.animation = 'none';
     document.querySelector(".coin-statistics__heads-count").textContent = `${headsCount}`;
     document.querySelector(".coin-statistics__tails-count").textContent = `${tailsCount}`;
 }
@@ -60,6 +60,7 @@ function disableButtons(){
 };
 
 function handleCoinReset() {
+    coinEl.style.animation = 'none';
     coinResetButton.classList.add('coin-reset-button--hidden');
     headsCount = 0;
     tailsCount = 0;

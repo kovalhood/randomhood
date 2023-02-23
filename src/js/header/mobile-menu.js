@@ -125,6 +125,9 @@ function handleMobileCoinClick() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    // handler for coin animation
+    document.querySelector('.coin').style.animation = 'none';
 }
 
 function handleMobilePasswordClick() {
