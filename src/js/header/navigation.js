@@ -11,6 +11,42 @@ const sectionDice = document.querySelector('#section-dice');
 const sectionCoin = document.querySelector('#section-coin');
 const sectionPassword = document.querySelector('#section-password');
 
+// Local storage logic for loading previous page on refresh
+loadingPreviousPage();
+
+function settingCurrentPage(page) {
+    localStorage.setItem('current-page', `${page}`);
+}
+
+function loadingPreviousPage() {
+    const previousPage = localStorage.getItem('current-page');
+
+    if (previousPage === 'Number') {
+        handleNavNumberClick();
+        return;
+    }
+
+    else if (previousPage === 'YesNo') {
+        handleYesNoClick();
+        return;
+    }
+
+    else if (previousPage === 'Dice') {
+        handleDiceClick();
+        return;
+    }
+
+    else if (previousPage === 'Coin') {
+        handleCoinClick();
+        return;
+    }
+
+    else if (previousPage === 'Password') {
+        handlePasswordClick();
+        return;
+    }
+}
+
 // Click logic for links in header
 navLogo.addEventListener('click', handleNavLogoClick);
 navNumber.addEventListener('click', handleNavNumberClick);
@@ -32,6 +68,8 @@ function handleNavLogoClick() {
     sectionDice.classList.add('hidden');
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
+
+    settingCurrentPage('Number');
 }
 
 function handleNavNumberClick() {
@@ -46,6 +84,8 @@ function handleNavNumberClick() {
     sectionDice.classList.add('hidden');
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
+
+    settingCurrentPage('Number');
 }
 
 function handleYesNoClick() {
@@ -60,6 +100,8 @@ function handleYesNoClick() {
     sectionDice.classList.add('hidden');
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
+
+    settingCurrentPage('YesNo');
 }
 
 function handleDiceClick() {
@@ -78,6 +120,8 @@ function handleDiceClick() {
     // handler for dice z-index fix
     document.querySelector('.dice-wrapper').style.opacity = '100';
     document.querySelector('.dice-wrapper').style.visibility = 'visible';
+    
+    settingCurrentPage('Dice');
 }
 
 function handleCoinClick() {
@@ -95,6 +139,8 @@ function handleCoinClick() {
 
     // handler for coin animation
     document.querySelector('.coin').style.animation = 'none';
+    
+    settingCurrentPage('Coin');
 }
 
 function handlePasswordClick() {
@@ -109,4 +155,8 @@ function handlePasswordClick() {
     sectionDice.classList.add('hidden');
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.remove('hidden');
+
+    settingCurrentPage('Password');
 }
+
+export { settingCurrentPage };

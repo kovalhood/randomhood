@@ -1,3 +1,5 @@
+import { settingCurrentPage } from "./navigation";
+
 const openMobileMenu = document.querySelector('.mobile-nav-menu__button--open');
 const closeMobileMenu = document.querySelector('.mobile-nav-menu__button--close');
 const mobileMenuEl = document.querySelector('.mobile-nav-menu__wrapper');
@@ -65,6 +67,8 @@ function handleMobileNavNumberClick() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    settingCurrentPage('Number');
 }
 
 function handleMobileYesNoClick() {
@@ -83,6 +87,8 @@ function handleMobileYesNoClick() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    settingCurrentPage('YesNo');
 }
 
 function handleMobileDiceClick() {
@@ -107,6 +113,8 @@ function handleMobileDiceClick() {
         document.querySelector('.dice-wrapper').style.opacity = '100';
         document.querySelector('.dice-wrapper').style.visibility = 'visible';
     }, 90);
+
+    settingCurrentPage('Dice');
 }
 
 function handleMobileCoinClick() {
@@ -128,6 +136,8 @@ function handleMobileCoinClick() {
 
     // handler for coin animation
     document.querySelector('.coin').style.animation = 'none';
+
+    settingCurrentPage('Coin');
 }
 
 function handleMobilePasswordClick() {
@@ -146,4 +156,6 @@ function handleMobilePasswordClick() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    settingCurrentPage('Password');
 }
