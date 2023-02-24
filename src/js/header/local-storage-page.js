@@ -1,5 +1,7 @@
 import { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick } from "./navigation";
 import { handleMobileNavNumberClick, handleMobileYesNoClick, handleMobileDiceClick, handleMobileCoinClick, handleMobilePasswordClick } from "./mobile-menu";
+import { navNumber } from "./navigation";
+import { mobileNavNumber } from "./mobile-menu";
 
 // Local storage logic for loading previous page on refresh
 loadingPreviousPage();
@@ -40,6 +42,9 @@ function loadingPreviousPage() {
         handleMobilePasswordClick();
         return;
     }
+
+    navNumber.classList.add('current');
+    mobileNavNumber.classList.add('mobile-current');
 }
 
 export { settingCurrentPage };
