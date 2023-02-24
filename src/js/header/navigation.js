@@ -1,4 +1,5 @@
 import { settingCurrentPage } from "./local-storage-page";
+import { handleMobileNavNumberClick } from "./mobile-menu";
 
 const navLogo = document.querySelector('#nav-logo');
 const navNumber = document.querySelector('#nav-number');
@@ -36,6 +37,9 @@ function handleNavLogoClick() {
     sectionPassword.classList.add('hidden');
 
     settingCurrentPage('Number');
+    
+    // This is for showing Number as current page on mobile version after logo click
+    handleMobileNavNumberClick();
 }
 
 function handleNavNumberClick() {
