@@ -1,4 +1,4 @@
-import { settingCurrentPage } from "./navigation";
+import { settingCurrentPage } from "./local-storage-page";
 
 const openMobileMenu = document.querySelector('.mobile-nav-menu__button--open');
 const closeMobileMenu = document.querySelector('.mobile-nav-menu__button--close');
@@ -159,3 +159,5 @@ function handleMobilePasswordClick() {
 
     settingCurrentPage('Password');
 }
+
+export { handleMobileNavNumberClick, handleMobileYesNoClick, handleMobileDiceClick, handleMobileCoinClick, handleMobilePasswordClick };

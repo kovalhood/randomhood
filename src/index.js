@@ -1,4 +1,5 @@
 import './sass/index.scss';
+import './js/header/local-storage-page';
 import './js/header/navigation';
 import './js/header/mobile-menu';
 import './js/number/number';

@@ -1,3 +1,5 @@
+import { settingCurrentPage } from "./local-storage-page";
+
 const navLogo = document.querySelector('#nav-logo');
 const navNumber = document.querySelector('#nav-number');
 const navYesNo = document.querySelector('#nav-yesno');
@@ -10,42 +12,6 @@ const sectionYesNo = document.querySelector('#section-yesno');
 const sectionDice = document.querySelector('#section-dice');
 const sectionCoin = document.querySelector('#section-coin');
 const sectionPassword = document.querySelector('#section-password');
-
-// Local storage logic for loading previous page on refresh
-loadingPreviousPage();
-
-function settingCurrentPage(page) {
-    localStorage.setItem('current-page', `${page}`);
-}
-
-function loadingPreviousPage() {
-    const previousPage = localStorage.getItem('current-page');
-
-    if (previousPage === 'Number') {
-        handleNavNumberClick();
-        return;
-    }
-
-    else if (previousPage === 'YesNo') {
-        handleYesNoClick();
-        return;
-    }
-
-    else if (previousPage === 'Dice') {
-        handleDiceClick();
-        return;
-    }
-
-    else if (previousPage === 'Coin') {
-        handleCoinClick();
-        return;
-    }
-
-    else if (previousPage === 'Password') {
-        handlePasswordClick();
-        return;
-    }
-}
 
 // Click logic for links in header
 navLogo.addEventListener('click', handleNavLogoClick);
@@ -159,4 +125,4 @@ function handlePasswordClick() {
     settingCurrentPage('Password');
 }
 
-export { settingCurrentPage };
+export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick };
