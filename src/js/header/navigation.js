@@ -1,5 +1,5 @@
 import { settingCurrentPage } from "./local-storage-page";
-import { handleMobileNavNumberClick } from "./mobile-menu";
+import { mobileNavNumber, mobileNavYesNo, mobileNavDice, mobileNavCoin, mobileNavPassword } from "./mobile-menu";
 
 const navLogo = document.querySelector('#nav-logo');
 const navNumber = document.querySelector('#nav-number');
@@ -24,11 +24,19 @@ navPassword.addEventListener('click', handlePasswordClick);
 
 // Handlers for navigation links
 function handleNavLogoClick() {
+    // Setting Number as current page on tablet and desktop
     navNumber.classList.add('current');
     navYesNo.classList.remove('current');
     navDice.classList.remove('current');
     navCoin.classList.remove('current');
     navPassword.classList.remove('current');
+
+    // Setting Number as current page on mobile
+    mobileNavNumber.classList.add('mobile-current');
+    mobileNavYesNo.classList.remove('mobile-current');
+    mobileNavDice.classList.remove('mobile-current');
+    mobileNavCoin.classList.remove('mobile-current');
+    mobileNavPassword.classList.remove('mobile-current');
 
     sectionNumber.classList.remove('hidden');
     sectionYesNo.classList.add('hidden');
@@ -37,17 +45,22 @@ function handleNavLogoClick() {
     sectionPassword.classList.add('hidden');
 
     settingCurrentPage('Number');
-    
-    // This is for showing Number as current page on mobile version after logo click
-    handleMobileNavNumberClick();
 }
 
 function handleNavNumberClick() {
+    // Setting Number as current page on tablet and desktop
     navNumber.classList.add('current');
     navYesNo.classList.remove('current');
     navDice.classList.remove('current');
     navCoin.classList.remove('current');
     navPassword.classList.remove('current');
+
+    // Setting Number as current page on mobile
+    mobileNavNumber.classList.add('mobile-current');
+    mobileNavYesNo.classList.remove('mobile-current');
+    mobileNavDice.classList.remove('mobile-current');
+    mobileNavCoin.classList.remove('mobile-current');
+    mobileNavPassword.classList.remove('mobile-current');
 
     sectionNumber.classList.remove('hidden');
     sectionYesNo.classList.add('hidden');
@@ -59,11 +72,19 @@ function handleNavNumberClick() {
 }
 
 function handleYesNoClick() {
+    // Setting YesNo as current page on tablet and desktop
     navNumber.classList.remove('current');
     navYesNo.classList.add('current');
     navDice.classList.remove('current');
     navCoin.classList.remove('current');
     navPassword.classList.remove('current');
+
+    // Setting YesNo as current page on mobile
+    mobileNavNumber.classList.remove('mobile-current');
+    mobileNavYesNo.classList.add('mobile-current');
+    mobileNavDice.classList.remove('mobile-current');
+    mobileNavCoin.classList.remove('mobile-current');
+    mobileNavPassword.classList.remove('mobile-current');
 
     sectionNumber.classList.add('hidden');
     sectionYesNo.classList.remove('hidden');
@@ -75,11 +96,19 @@ function handleYesNoClick() {
 }
 
 function handleDiceClick() {
+    // Setting Dice as current page on tablet and desktop
     navNumber.classList.remove('current');
     navYesNo.classList.remove('current');
     navDice.classList.add('current');
     navCoin.classList.remove('current');
     navPassword.classList.remove('current');
+
+    // Setting Dice as current page on mobile
+    mobileNavNumber.classList.remove('mobile-current');
+    mobileNavYesNo.classList.remove('mobile-current');
+    mobileNavDice.classList.add('mobile-current');
+    mobileNavCoin.classList.remove('mobile-current');
+    mobileNavPassword.classList.remove('mobile-current');
 
     sectionNumber.classList.add('hidden');
     sectionYesNo.classList.add('hidden');
@@ -95,11 +124,19 @@ function handleDiceClick() {
 }
 
 function handleCoinClick() {
+    // Setting Coin as current page on tablet and desktop
     navNumber.classList.remove('current');
     navYesNo.classList.remove('current');
     navDice.classList.remove('current');
     navCoin.classList.add('current');
     navPassword.classList.remove('current');
+
+    // Setting Coin as current page on mobile
+    mobileNavNumber.classList.remove('mobile-current');
+    mobileNavYesNo.classList.remove('mobile-current');
+    mobileNavDice.classList.remove('mobile-current');
+    mobileNavCoin.classList.add('mobile-current');
+    mobileNavPassword.classList.remove('mobile-current');
 
     sectionNumber.classList.add('hidden');
     sectionYesNo.classList.add('hidden');
@@ -114,11 +151,19 @@ function handleCoinClick() {
 }
 
 function handlePasswordClick() {
+    // Setting Password as current page on tablet and desktop
     navNumber.classList.remove('current');
     navYesNo.classList.remove('current');
     navDice.classList.remove('current');
     navCoin.classList.remove('current');
     navPassword.classList.add('current');
+
+    // Setting Password as current page on mobile
+    mobileNavNumber.classList.remove('mobile-current');
+    mobileNavYesNo.classList.remove('mobile-current');
+    mobileNavDice.classList.remove('mobile-current');
+    mobileNavCoin.classList.remove('mobile-current');
+    mobileNavPassword.classList.add('mobile-current');
 
     sectionNumber.classList.add('hidden');
     sectionYesNo.classList.add('hidden');
@@ -129,4 +174,4 @@ function handlePasswordClick() {
     settingCurrentPage('Password');
 }
 
-export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick };
+export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick, navNumber, navYesNo, navDice, navCoin, navPassword };
