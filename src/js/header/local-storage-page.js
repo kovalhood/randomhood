@@ -43,6 +43,7 @@ function loadingPreviousPage() {
         return;
     }
 
+    // If local storage is empty, we need to set Number as our default current page
     navNumber.classList.add('current');
     mobileNavNumber.classList.add('mobile-current');
 }
