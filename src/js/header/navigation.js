@@ -222,4 +222,4 @@ function handlePasswordClick() {
     settingCurrentPage('Password');
 }
 
-export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick, navNumber, navYesNo, navDice, navCoin, navPassword, containerNumber, containerYesNo, containerDice, containerCoin, containerPassword };
+export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick, sectionNumber, navNumber, navYesNo, navDice, navCoin, navPassword, containerNumber, containerYesNo, containerDice, containerCoin, containerPassword };
