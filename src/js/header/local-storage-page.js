@@ -12,7 +12,7 @@ function settingCurrentPage(page) {
     let expirationTime = new Date();
 
     // Setting 30 minutes expiration time
-    expirationTime.setTime(currentTime.getTime() + (30 * 60 * 1000));
+    expirationTime.setTime(currentTime.getTime() + (1 * 60 * 1000));
 
     localStorage.setItem('current-page', `${page}`);
     localStorage.setItem('page-expiration-time', expirationTime);
