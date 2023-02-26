@@ -1,6 +1,6 @@
 import { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick } from "./navigation";
 import { handleMobileNavNumberClick, handleMobileYesNoClick, handleMobileDiceClick, handleMobileCoinClick, handleMobilePasswordClick } from "./mobile-menu";
-import { sectionNumber, navNumber } from "./navigation";
+import { sectionNumber, navNumber, containerNumber } from "./navigation";
 import { mobileNavNumber } from "./mobile-menu";
 
 // Local storage logic for loading previous page on refresh
@@ -66,6 +66,7 @@ function loadingPreviousPage() {
     sectionNumber.classList.remove('hidden');
     navNumber.classList.add('current');
     mobileNavNumber.classList.add('mobile-current');
+    containerNumber.classList.add('show');
 }
 
 export { settingCurrentPage };
