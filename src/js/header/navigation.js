@@ -14,6 +14,12 @@ const sectionDice = document.querySelector('#section-dice');
 const sectionCoin = document.querySelector('#section-coin');
 const sectionPassword = document.querySelector('#section-password');
 
+const containerNumber = document.querySelector('.number--container');
+const containerYesNo = document.querySelector('.yesno--container');
+const containerDice = document.querySelector('.dice--container');
+const containerCoin = document.querySelector('.coin--container');
+const containerPassword = document.querySelector('.password--container');
+
 // Click logic for links in header
 navLogo.addEventListener('click', handleNavLogoClick);
 navNumber.addEventListener('click', handleNavNumberClick);
@@ -44,6 +50,13 @@ function handleNavLogoClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
 
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    setTimeout(() => containerNumber.classList.add('show'), 80);
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Number');
 }
 
@@ -68,6 +81,13 @@ function handleNavNumberClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
 
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    setTimeout(() => containerNumber.classList.add('show'), 80);
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Number');
 }
 
@@ -91,6 +111,13 @@ function handleYesNoClick() {
     sectionDice.classList.add('hidden');
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.add('hidden');
+
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    setTimeout(() => containerYesNo.classList.add('show'), 80);
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
 
     settingCurrentPage('YesNo');
 }
@@ -120,6 +147,13 @@ function handleDiceClick() {
     document.querySelector('.dice-wrapper').style.opacity = '100';
     document.querySelector('.dice-wrapper').style.visibility = 'visible';
     
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    containerYesNo.classList.remove('show');
+    setTimeout(() => containerDice.classList.add('show'), 80);
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Dice');
 }
 
@@ -147,6 +181,13 @@ function handleCoinClick() {
     // handler for coin animation
     document.querySelector('.coin').style.animation = 'none';
     
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    setTimeout(() => containerCoin.classList.add('show'), 80);
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Coin');
 }
 
@@ -171,7 +212,14 @@ function handlePasswordClick() {
     sectionCoin.classList.add('hidden');
     sectionPassword.classList.remove('hidden');
 
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    setTimeout(() => containerPassword.classList.add('show'), 80);
+
     settingCurrentPage('Password');
 }
 
-export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick, navNumber, navYesNo, navDice, navCoin, navPassword };
+export { handleNavNumberClick, handleYesNoClick, handleDiceClick, handleCoinClick, handlePasswordClick, navNumber, navYesNo, navDice, navCoin, navPassword, containerNumber, containerYesNo, containerDice, containerCoin, containerPassword };

@@ -1,5 +1,5 @@
 import { settingCurrentPage } from "./local-storage-page";
-import { navNumber, navYesNo, navDice, navCoin, navPassword } from "./navigation";
+import { navNumber, navYesNo, navDice, navCoin, navPassword, containerNumber, containerYesNo, containerDice, containerCoin, containerPassword } from "./navigation";
 
 const openMobileMenu = document.querySelector('.mobile-nav-menu__button--open');
 const closeMobileMenu = document.querySelector('.mobile-nav-menu__button--close');
@@ -77,6 +77,13 @@ function handleMobileNavNumberClick() {
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
 
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    setTimeout(() => containerNumber.classList.add('show'), 50);
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Number');
 }
 
@@ -104,6 +111,13 @@ function handleMobileYesNoClick() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    setTimeout(() => containerYesNo.classList.add('show'), 50);
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
 
     settingCurrentPage('YesNo');
 }
@@ -139,6 +153,13 @@ function handleMobileDiceClick() {
         document.querySelector('.dice-wrapper').style.visibility = 'visible';
     }, 90);
 
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    containerYesNo.classList.remove('show');
+    setTimeout(() => containerDice.classList.add('show'), 50);
+    containerCoin.classList.remove('show');
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Dice');
 }
 
@@ -170,6 +191,13 @@ function handleMobileCoinClick() {
     // handler for coin animation
     document.querySelector('.coin').style.animation = 'none';
 
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    setTimeout(() => containerCoin.classList.add('show'), 50);
+    containerPassword.classList.remove('show');
+
     settingCurrentPage('Coin');
 }
 
@@ -197,6 +225,13 @@ function handleMobilePasswordClick() {
     mobileMenuEl.classList.remove('is-open');
     themeSelector.setAttribute("content", "#ffffff");
     document.body.style.overflow = 'visible';
+
+    // Adding smooth animation (need to do that here, because sections have display: none property)
+    containerNumber.classList.remove('show');
+    containerYesNo.classList.remove('show');
+    containerDice.classList.remove('show');
+    containerCoin.classList.remove('show');
+    setTimeout(() => containerPassword.classList.add('show'), 50);
 
     settingCurrentPage('Password');
 }
