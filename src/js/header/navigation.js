@@ -20,6 +20,9 @@ const containerDice = document.querySelector('.dice--container');
 const containerCoin = document.querySelector('.coin--container');
 const containerPassword = document.querySelector('.password--container');
 
+// Animation duration for switch between pages
+const animationDuration = 80;
+
 // Click logic for links in header
 navLogo.addEventListener('click', handleNavLogoClick);
 navNumber.addEventListener('click', handleNavNumberClick);
@@ -51,7 +54,7 @@ function handleNavLogoClick() {
     sectionPassword.classList.add('hidden');
 
     // Adding smooth animation (need to do that here, because sections have display: none property)
-    setTimeout(() => containerNumber.classList.add('show'), 80);
+    setTimeout(() => containerNumber.classList.add('show'), animationDuration);
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
@@ -82,7 +85,7 @@ function handleNavNumberClick() {
     sectionPassword.classList.add('hidden');
 
     // Adding smooth animation (need to do that here, because sections have display: none property)
-    setTimeout(() => containerNumber.classList.add('show'), 80);
+    setTimeout(() => containerNumber.classList.add('show'), animationDuration);
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
@@ -114,7 +117,7 @@ function handleYesNoClick() {
 
     // Adding smooth animation (need to do that here, because sections have display: none property)
     containerNumber.classList.remove('show');
-    setTimeout(() => containerYesNo.classList.add('show'), 80);
+    setTimeout(() => containerYesNo.classList.add('show'), animationDuration);
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
     containerPassword.classList.remove('show');
@@ -150,7 +153,7 @@ function handleDiceClick() {
     // Adding smooth animation (need to do that here, because sections have display: none property)
     containerNumber.classList.remove('show');
     containerYesNo.classList.remove('show');
-    setTimeout(() => containerDice.classList.add('show'), 80);
+    setTimeout(() => containerDice.classList.add('show'), animationDuration);
     containerCoin.classList.remove('show');
     containerPassword.classList.remove('show');
 
@@ -185,7 +188,7 @@ function handleCoinClick() {
     containerNumber.classList.remove('show');
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
-    setTimeout(() => containerCoin.classList.add('show'), 80);
+    setTimeout(() => containerCoin.classList.add('show'), animationDuration);
     containerPassword.classList.remove('show');
 
     settingCurrentPage('Coin');
@@ -217,7 +220,7 @@ function handlePasswordClick() {
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
-    setTimeout(() => containerPassword.classList.add('show'), 80);
+    setTimeout(() => containerPassword.classList.add('show'), animationDuration);
 
     settingCurrentPage('Password');
 }
