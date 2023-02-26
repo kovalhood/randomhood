@@ -78,7 +78,7 @@ function handleMobileNavNumberClick() {
     document.body.style.overflow = 'visible';
 
     // Adding smooth animation (need to do that here, because sections have display: none property)
-    setTimeout(() => containerNumber.classList.add('show'), 50);
+    containerNumber.classList.add('show');
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
@@ -114,7 +114,7 @@ function handleMobileYesNoClick() {
 
     // Adding smooth animation (need to do that here, because sections have display: none property)
     containerNumber.classList.remove('show');
-    setTimeout(() => containerYesNo.classList.add('show'), 50);
+    containerYesNo.classList.add('show');
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
     containerPassword.classList.remove('show');
@@ -156,7 +156,7 @@ function handleMobileDiceClick() {
     // Adding smooth animation (need to do that here, because sections have display: none property)
     containerNumber.classList.remove('show');
     containerYesNo.classList.remove('show');
-    setTimeout(() => containerDice.classList.add('show'), 50);
+    containerDice.classList.add('show');
     containerCoin.classList.remove('show');
     containerPassword.classList.remove('show');
 
@@ -195,7 +195,7 @@ function handleMobileCoinClick() {
     containerNumber.classList.remove('show');
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
-    setTimeout(() => containerCoin.classList.add('show'), 50);
+    containerCoin.classList.add('show');
     containerPassword.classList.remove('show');
 
     settingCurrentPage('Coin');
@@ -231,7 +231,7 @@ function handleMobilePasswordClick() {
     containerYesNo.classList.remove('show');
     containerDice.classList.remove('show');
     containerCoin.classList.remove('show');
-    setTimeout(() => containerPassword.classList.add('show'), 50);
+    containerPassword.classList.add('show');
 
     settingCurrentPage('Password');
 }
