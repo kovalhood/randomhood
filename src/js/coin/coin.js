@@ -7,10 +7,12 @@ const coinResetButton = document.querySelector('.coin-reset-button');
 coinFlipButton.addEventListener('click', handleCoinFlip);
 coinResetButton.addEventListener("click", handleCoinReset);
 
+// Coin flip logic
 function handleCoinFlip() {
     let randomCoin = Math.floor(Math.random() * 2);
     coinEl.style.animation = 'none';
 
+    // Setting coin flip animation and result counting
     if (randomCoin) {
         setTimeout(function () {
             coinEl.style.animation = 'spin-heads 3s forwards';
@@ -25,10 +27,12 @@ function handleCoinFlip() {
         tailsCount += 1;
     }
 
+    // Removing coin flip animation after 3s
     setTimeout(function () {
         coinResetButton.classList.remove('coin-reset-button--hidden');
     }, 3000);
     
+    // Updating stats after coin flip result
     setTimeout(updateStats, 3000);
     disableButtons();
 }
@@ -38,6 +42,7 @@ function updateStats() {
     document.querySelector(".coin-statistics__tails-count").textContent = `${tailsCount}`;
 }
 
+// Disabling buttons while flipping coin
 function disableButtons(){
     coinFlipButton.disabled = true;
     coinFlipButton.classList.remove('coin-flip-button--enabled');
@@ -58,6 +63,7 @@ function disableButtons(){
     },3000);
 };
 
+// Reset button logic
 function handleCoinReset() {
     coinEl.style.animation = 'none';
     coinResetButton.classList.add('coin-reset-button--hidden');
