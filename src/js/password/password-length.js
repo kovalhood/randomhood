@@ -19,7 +19,6 @@ function handleLengthRemoveClick() {
     passwordLengthInput.value = Number(passwordLengthInput.value) - 1;
 
     if (passwordLengthInput.value == passwordLengthMin) {
-        console.log(passwordLengthMin, passwordLengthMax);
         lengthRemoveButtonOff();
     }
 
@@ -77,3 +76,5 @@ function lengthAddButtonOn() {
     passwordLengthAdd.classList.remove('password__length--disabled');
     passwordLengthAdd.disabled = false;
 }
+
+export { passwordLengthInput };

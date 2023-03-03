@@ -40,3 +40,5 @@ function settingCheckboxStatus(element, label) {
         label.textContent = 'Off';
     }
 }
+
+export { lowercaseCheckbox, uppercaseCheckbox, numbersCheckbox, symbolsCheckbox };
