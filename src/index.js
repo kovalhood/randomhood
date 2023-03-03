@@ -12,5 +12,6 @@ import './js/dice/dice';
 import './js/dice/dice-amount-logic';
 import './js/coin/coin';
 import './js/password/password';
+import './js/password/copy-button';
 import './js/password/password-length';
 import './js/password/settings-checkboxes';
