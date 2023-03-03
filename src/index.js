@@ -12,3 +12,4 @@ import './js/dice/dice';
 import './js/dice/dice-amount-logic';
 import './js/coin/coin';
 import './js/password/password';
+import './js/password/settings-checkboxes';
