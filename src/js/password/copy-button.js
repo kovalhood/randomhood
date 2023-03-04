@@ -1,4 +1,5 @@
-const passwordGenerationResult = document.querySelector('#password-result');
+import { passwordGenerationResult } from "./password";
+
 const copyButton = document.querySelector('#password--result-copy');
 const passwordResultLabel = document.querySelector('#password-result-label');
 
