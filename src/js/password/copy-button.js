@@ -26,5 +26,7 @@ function handleCopyToClipboard() {
         passwordResultLabel.classList.remove('password__result-label--visible');
         copyButton.disabled = false;
         copyButton.classList.remove('password__result-copy--disabled');
-    }, 3000);
+    }, 2000);
 };
+
+export { copyButton, passwordResultLabel };

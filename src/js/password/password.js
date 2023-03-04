@@ -1,3 +1,4 @@
+import { copyButton, passwordResultLabel } from "./copy-button";
 import { passwordLengthInput } from "./password-length";
 import { lowercaseCheckbox, uppercaseCheckbox, numbersCheckbox, symbolsCheckbox } from "./settings-checkboxes";
 
@@ -14,18 +15,17 @@ const randomFunctions = {
 generatePasswordButton.addEventListener('click', handleGeneratePasswordClick);
 
 function handleGeneratePasswordClick() {
+    passwordResultLabel.classList.add('password__result-label--hidden');
+    passwordResultLabel.classList.remove('password__result-label--visible');
+    copyButton.disabled = false;
+    copyButton.classList.remove('password__result-copy--disabled');
+
     // With the help of '+' symbol length type will be a number
     const passwordLength = +passwordLengthInput.value;
     const hasLowercase = lowercaseCheckbox.checked;
     const hasUppercase = uppercaseCheckbox.checked;
     const hasNumbers = numbersCheckbox.checked;
     const hasSymbols = symbolsCheckbox.checked;
-
-    // console.log(passwordLength);
-    // console.log(hasLowercase);
-    // console.log(hasUppercase);
-    // console.log(hasNumbers);
-    // console.log(hasSymbols);
 
     passwordGenerationResult.value = generatePassword(passwordLength, hasLowercase, hasUppercase, hasNumbers, hasSymbols);
 }
@@ -57,7 +57,7 @@ function generatePassword(length, lowercase, uppercase, numbers, symbols) {
 // Link for charset codes https://net-comber.com/charset.html
 // Functions for random letters, numbers and symbols
 function getRandomLowercase() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 96);
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
 function getRandomUppercase() {
