@@ -34,24 +34,38 @@ function handleGeneratePasswordClick() {
 function generatePassword(length, lowercase, uppercase, numbers, symbols) {
     let generatedPassword = '';
 
+    // Counting selected types
     const typesCount = lowercase + uppercase + numbers + symbols;
+    // Creating an array of objects of filtered types, only selected ones will be in an array
     const typesArray = [{ lowercase }, { uppercase }, { numbers }, { symbols }].filter(item => Object.values(item)[0]);
-    // console.log(typesArray);
 
     if (typesCount === 0) {
         return '';
     }
 
-    for (let i = 0; i < length; i += typesCount){
-        typesArray.forEach(type => {
-            const functionName = Object.keys(type)[0];
-            generatedPassword += randomFunctions[functionName]();
-        })
+    for (let i = 0; i < length; i += 1){
+        // Generating random number for selecting random type from array
+        let randomType = Math.floor(Math.random() * typesCount);
+
+        // Taking random type from our array (key name is our type)
+        const functionName = Object.keys(typesArray[randomType])[0];
+
+        // Selecting random function and adding result to generated password string
+        generatedPassword += randomFunctions[functionName]();
     }
 
-    const finalPassword = generatedPassword.slice(0, length);
+    // First solution, it is good but random types are going in a straight order
+    // Lower, upper, number and symbol, so passwords are always typical in this solution
+    // for (let i = 0; i < length; i += typesCount){
+    //     typesArray.forEach(type => {
+    //         const functionName = Object.keys(type)[0];
+    //         generatedPassword += randomFunctions[functionName]();
+    //     })
+    // }
 
-    return finalPassword;
+    // const finalPassword = generatedPassword.slice(0, length);
+
+    return generatedPassword;
 }
 
 // Link for charset codes https://net-comber.com/charset.html
