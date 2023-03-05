@@ -8,6 +8,7 @@ copyButton.addEventListener('click', handleCopyToClipboard);
 function handleCopyToClipboard() {
     passwordResultLabel.classList.remove('password__result-label--hidden');
     passwordResultLabel.classList.add('password__result-label--visible');
+    passwordResultLabel.textContent = 'Copied';
     copyButton.disabled = true;
     copyButton.classList.add('password__result-copy--disabled');
 
