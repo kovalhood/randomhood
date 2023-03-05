@@ -40,7 +40,7 @@ function handleStrengthUpdate(password) {
         strength += 11;
     }
 
-    // Adding strength for amount of types in password (min = 1, max = 4)
+    // Adding strength for amount of types in password (min = 2, max = 8)
     if (password.match(lowercaseChars)) {
         strength += 2;
     }
@@ -67,7 +67,8 @@ function handleStrengthUpdate(password) {
     if (symbolsCount >= 3) {
         strength += 3;
     }
-    
+
+    // Styling strength indicator depending on password strength
     if (strength <= badStrength) {
         strengthIndicator.classList.add('password__strength--bad');
         strengthIndicator.classList.remove('password__strength--average');

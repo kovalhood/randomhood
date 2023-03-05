@@ -55,17 +55,7 @@ function generatePassword(length, lowercase, uppercase, numbers, symbols) {
         generatedPassword += randomFunctions[functionName]();
     }
 
-    // First solution, it is good but random types are going in a straight order
-    // Lower, upper, number and symbol, so passwords are always typical in this solution
-    // for (let i = 0; i < length; i += typesCount){
-    //     typesArray.forEach(type => {
-    //         const functionName = Object.keys(type)[0];
-    //         generatedPassword += randomFunctions[functionName]();
-    //     })
-    // }
-
-    // const finalPassword = generatedPassword.slice(0, length);
-
+    // Updating status of password strength
     handleStrengthUpdate(generatedPassword);
 
     return generatedPassword;
