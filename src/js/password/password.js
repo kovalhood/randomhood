@@ -1,3 +1,4 @@
+import { handleStrengthUpdate } from "./strength-indicator";
 import { copyButton, passwordResultLabel } from "./copy-button";
 import { passwordLengthInput } from "./password-length";
 import { lowercaseCheckbox, uppercaseCheckbox, numbersCheckbox, symbolsCheckbox } from "./settings-checkboxes";
@@ -64,6 +65,8 @@ function generatePassword(length, lowercase, uppercase, numbers, symbols) {
     // }
 
     // const finalPassword = generatedPassword.slice(0, length);
+
+    handleStrengthUpdate(generatedPassword);
 
     return generatedPassword;
 }
