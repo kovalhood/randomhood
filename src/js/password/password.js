@@ -16,6 +16,7 @@ const randomFunctions = {
 generatePasswordButton.addEventListener('click', handleGeneratePasswordClick);
 
 function handleGeneratePasswordClick() {
+    // Enabling everything related to copy button
     passwordResultLabel.classList.add('password__result-label--hidden');
     passwordResultLabel.classList.remove('password__result-label--visible');
     copyButton.disabled = false;
@@ -44,6 +45,7 @@ function generatePassword(length, lowercase, uppercase, numbers, symbols) {
         return '';
     }
 
+    // Creating a loop for our password chars generation
     for (let i = 0; i < length; i += 1){
         // Generating random number for selecting random type from array
         let randomType = Math.floor(Math.random() * typesCount);
