@@ -6,6 +6,7 @@ import { lowercaseCheckbox, uppercaseCheckbox, numbersCheckbox, symbolsCheckbox 
 const passwordGenerationResult = document.querySelector('#password-result');
 const generatePasswordButton = document.querySelector('.password__button');
 
+// Adding our random chars generation functions to the object
 const randomFunctions = {
     lowercase: getRandomLowercase,
     uppercase: getRandomUppercase,
