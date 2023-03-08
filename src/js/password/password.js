@@ -14,6 +14,7 @@ const randomFunctions = {
     symbols: getRandomSymbol
 }
 
+// Event listener for password generation button
 generatePasswordButton.addEventListener('click', handleGeneratePasswordClick);
 
 function handleGeneratePasswordClick() {
